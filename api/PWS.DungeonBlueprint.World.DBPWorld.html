@@ -1,0 +1,2639 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DBPWorld | Dungeon Blueprint - 3D Dungeon Generator </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DBPWorld | Dungeon Blueprint - 3D Dungeon Generator ">
+      
+      <meta name="description" content="Runtime interface of a generated dungeon. This is one of the main components of Dungeon Blueprint. World takes a previously generated  and spawns it into the Unity scene. After spawning, the world offers runtime feature like querying and events.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/new/main/apiSpec/new?filename=PWS_DungeonBlueprint_World_DBPWorld.md&amp;value=---%0Auid%3A%20PWS.DungeonBlueprint.World.DBPWorld%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Dungeon Blueprint">
+            Dungeon Blueprint
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="PWS.DungeonBlueprint.World.DBPWorld">
+
+
+
+  <h1 id="PWS_DungeonBlueprint_World_DBPWorld" data-uid="PWS.DungeonBlueprint.World.DBPWorld" class="text-break">
+Class DBPWorld  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PWS.html">PWS</a>.<a class="xref" href="PWS.DungeonBlueprint.html">DungeonBlueprint</a>.<a class="xref" href="PWS.DungeonBlueprint.World.html">World</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Runtime interface of a generated dungeon. This is one of the main components of Dungeon Blueprint.
+World takes a previously generated <span class="xref">PWS.DungeonBlueprint.World.DBPWorld.RuntimeGraph</span> and spawns it into the Unity scene.
+After spawning, the world offers runtime feature like querying and events.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DBPWorld : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DBPWorld</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="PWS_DungeonBlueprint_World_DBPWorld_examples">Examples</h2>
+  <p>Spawn a dungeon</p>
+<pre><code class="lang-csharp">void Awake() {
+    world = new DBPWorld(registry);
+    world.Setup(runtimeGraph, settings);
+}
+
+void Update() {
+    // Tick spawns the dungeon and then checks registered events, so you can just keep calling this
+    world.Tick();
+}</code></pre>
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld__ctor_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.#ctor*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld__ctor_PWS_DungeonBlueprint_Core_DBPRegistry_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.#ctor(PWS.DungeonBlueprint.Core.DBPRegistry)">
+  DBPWorld(DBPRegistry)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html">DBPWorld</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DBPWorld(DBPRegistry registry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>registry</code> <a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a></dt>
+    <dd><p>Registry your rooms and doors are registered with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_DungeonOriginWorldPosition_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.DungeonOriginWorldPosition*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_DungeonOriginWorldPosition" data-uid="PWS.DungeonBlueprint.World.DBPWorld.DungeonOriginWorldPosition">
+  DungeonOriginWorldPosition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position of the dungeon grid origin when it is spawned into the world.
+See <a class="xref" href="PWS.DungeonBlueprint.Core.DBPWorldSettings.html#PWS_DungeonBlueprint_Core_DBPWorldSettings_DungeonOriginWorldPosition">DungeonOriginWorldPosition</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 DungeonOriginWorldPosition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_IsReady_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.IsReady*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_IsReady" data-uid="PWS.DungeonBlueprint.World.DBPWorld.IsReady">
+  IsReady
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the world is fully set up and the dungeon is spawned.<br>
+Gameplay events will not be invoked and some queries are not available if this is false.
+See <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_OnWorldIsReady">OnWorldIsReady</a> for an event that notifies you when the world is ready.
+See also <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_OnWorldReset">OnWorldReset</a> for an event that notifies you when the world is not ready anymore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReady { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_NrDoors_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.NrDoors*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_NrDoors" data-uid="PWS.DungeonBlueprint.World.DBPWorld.NrDoors">
+  NrDoors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of doors in the current world.<br>
+0 if the world is not set up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NrDoors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_NrRooms_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.NrRooms*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_NrRooms" data-uid="PWS.DungeonBlueprint.World.DBPWorld.NrRooms">
+  NrRooms
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of rooms in the current world.<br>
+0 if the world is not set up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NrRooms { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_RoomGridToWorld_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RoomGridToWorld*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RoomGridToWorld" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RoomGridToWorld">
+  RoomGridToWorld
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>World scale of rooms. A 1x1x1 room is expected to have exactly these bounds in world space.
+See <a class="xref" href="PWS.DungeonBlueprint.Core.DBPWorldSettings.html#PWS_DungeonBlueprint_Core_DBPWorldSettings_RoomGridToWorld">RoomGridToWorld</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 RoomGridToWorld { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_SpawnContainer_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.SpawnContainer*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_SpawnContainer" data-uid="PWS.DungeonBlueprint.World.DBPWorld.SpawnContainer">
+  SpawnContainer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parent transform of all GameObjects spawned for the dungeon.
+This is <code>null</code> when no dungeon is spawned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform SpawnContainer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_SpawnContainer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The spawned GameObjects include not only the rooms and doors, but also the block doors spawned.<br>
+Note that this property does not specifically filter GameObjects for the objects it actually spawned.
+If your own code instantiates more GameObjects alongside the spawned rooms and doors, they will also be children of this container.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_AreRoomsConnected_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.AreRoomsConnected*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_AreRoomsConnected_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.AreRoomsConnected(System.Int32,System.Int32)">
+  AreRoomsConnected(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the two given rooms are connected through a door.<br>
+You can get the room indices using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AreRoomsConnected(int room1, int room2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>First room.</p>
+</dd>
+    <dt><code>room2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Second room.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if there is a direction connection between the two rooms, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_AreRoomsConnected_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This check is commutative (i.e. AreRoomsConnected(room1, room2) == AreRoomsConnected(room2, room1)).</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">room1</code> does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">room2</code> does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_Dispose_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.Dispose*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_Dispose" data-uid="PWS.DungeonBlueprint.World.DBPWorld.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Frees native memory.
+You must not continue using this instance after calling this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_Dispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is the same as calling <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_Reset">Reset()</a>, except that <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_OnWorldReset">OnWorldReset</a> will be called with true as second parameter.<br>
+You may use this as indication that the world will not be reused, and it is time to clean up all resources related to it.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_DoesDoorConnectRooms_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.DoesDoorConnectRooms*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_DoesDoorConnectRooms_System_Int32_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.DoesDoorConnectRooms(System.Int32,System.Int32,System.Int32)">
+  DoesDoorConnectRooms(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L771"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the given door connects to the two given rooms.
+You can get the door index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetDoorByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_">RegisterDoorEvents(Transform, DoorPassHandler)</a>).
+You can get the room indices using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DoesDoorConnectRooms(int door, int room1, int room2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door to check for connection between the rooms</p>
+</dd>
+    <dt><code>room1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>First room to check for connection.</p>
+</dd>
+    <dt><code>room2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Second room to check for connection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">room1</code> and <code class="paramref">room2</code> are connected by <code class="paramref">door</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_DoesDoorConnectRooms_System_Int32_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The order in which you pass the rooms makes no difference. DoesDoorConnectRooms(door, room1, room2) == DoesDoorConnectRooms(door, room2, room1).</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">room1</code> does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">room2</code> does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the door is not connected to any rooms (which is not a valid state in general).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorBetweenRooms_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorBetweenRooms*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorBetweenRooms_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorBetweenRooms(System.Int32,System.Int32)">
+  GetDoorBetweenRooms(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L496"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the door between two rooms.<br>
+You can get the room indices using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetDoorBetweenRooms(int room1, int room2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>First room.</p>
+</dd>
+    <dt><code>room2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Second room.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door index connecting the two rooms or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidEdge">InvalidEdge</a> if the rooms are not connected.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorBetweenRooms_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method is commutative (i.e. GetDoorBetweenRooms(room1, room2) == GetDoorBetweenRooms(room2, room1)).</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">room1</code> does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">room2</code> does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByGameObject_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByGameObject*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByGameObject_UnityEngine_GameObject_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByGameObject(UnityEngine.GameObject)">
+  GetDoorByGameObject(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L724"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the door index of the door with the given game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetDoorByGameObject(GameObject gameObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>Game object you want to get the door for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door index with the given game object or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidEdge">InvalidEdge</a> if such a door does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not ready.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByGridPositionAndDirection_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByGridPositionAndDirection*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByGridPositionAndDirection_PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_Grid_GridDirection_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByGridPositionAndDirection(PWS.DungeonBlueprint.Grid.GridPosition,PWS.DungeonBlueprint.Grid.GridDirection)">
+  GetDoorByGridPositionAndDirection(GridPosition, GridDirection)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L692"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the door index of the door with the given position and direction.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetDoorByGridPositionAndDirection(GridPosition position, GridDirection direction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a></dt>
+    <dd><p>Position you want to get the door for.</p>
+</dd>
+    <dt><code>direction</code> <a class="xref" href="PWS.DungeonBlueprint.Grid.GridDirection.html">GridDirection</a></dt>
+    <dd><p>Direction you want to get the door for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door index with the given position and direction or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidEdge">InvalidEdge</a> if such a door does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByGridPositionAndDirection_PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_Grid_GridDirection__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>There are 2 different combinations of grid position and direction that represent the same position (i.e. position (0, 0, 0) and direction HorizontalRight and position (1, 0, 0) and direction HorizontalLeft are the same).
+This function always checks both the given position and direction and its equivalent second representation for a door.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByName*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByName(Unity.Collections.FixedString64Bytes,System.Int32)">
+  GetDoorByName(FixedString64Bytes, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L665"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the door index of the door with the given name.<br>
+Door name is not necessarily unique, so you can pass an additional index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetDoorByName(FixedString64Bytes name, int repetitionIdx = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>Name you want to get the door for. Note that <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> can be implicitly converted into <span class="xref">Unity.Collections.FixedString64Bytes</span>, so you can pass <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> into this method.</p>
+</dd>
+    <dt><code>repetitionIdx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Optional index of the edge if it was inserted repeatedly through a group node.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door index with the given name and index or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidEdge">InvalidEdge</a> if such a door does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorConnectedToRoom_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorConnectedToRoom*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorConnectedToRoom_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorConnectedToRoom(System.Int32,System.Int32)">
+  GetDoorConnectedToRoom(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the door connected to the given room with the given index.<br>
+Useful for iterating through all connected doors of a room.
+Use <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectionCount_System_Int32_">GetRoomConnectionCount(int)</a> to find out how many connected doors there are.<br>
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetDoorConnectedToRoom(int room, int doorIdx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room you want to get the connected door for.</p>
+</dd>
+    <dt><code>doorIdx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Index of the connected door.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Connected door index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">doorIdx</code> is negative or larger than <a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_NrAdjacenciesPerNode">NrAdjacenciesPerNode</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room is connected to fewer than <code class="paramref">doorIdx</code> doors.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorData_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorData*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorData_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorData(System.Int32)">
+  GetDoorData(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L704"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the door data of the given door.
+You can get the door index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetDoorByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_">RegisterDoorEvents(Transform, DoorPassHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DoorDataSO GetDoorData(int door)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door you want to get the door data of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Data.DoorDataSO.html">DoorDataSO</a></dt>
+    <dd><p>Door data of the door.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the door data of the given door is not registered with the <a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a>.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorGameObject_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorGameObject*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorGameObject_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorGameObject(System.Int32)">
+  GetDoorGameObject(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L715"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the game object of the given door.<br>
+You can get the door index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetDoorByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_">RegisterDoorEvents(Transform, DoorPassHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject GetDoorGameObject(int door)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door you want to get the game object of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd><p>Game object of the door.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not ready.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorGridPositionAndDirection_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorGridPositionAndDirection*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorGridPositionAndDirection_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorGridPositionAndDirection(System.Int32)">
+  GetDoorGridPositionAndDirection(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L679"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the grid position of the given door.<br>
+You can get the door index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetDoorByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_">RegisterDoorEvents(Transform, DoorPassHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (GridPosition, GridDirection) GetDoorGridPositionAndDirection(int door)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door you want to get the position of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a>, <a class="xref" href="PWS.DungeonBlueprint.Grid.GridDirection.html">GridDirection</a>)</dt>
+    <dd><p>Grid position and direction of the door.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorGridPositionAndDirection_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>There are 2 different combinations of grid position and direction that represent the same position (i.e. position (0, 0, 0) and direction HorizontalRight and position (1, 0, 0) and direction HorizontalLeft are the same).
+There is no way to predict which combination this function will return. However, the return value is stable, so this function will always return the same values for the same door if you do not reset the world.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorName_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorName*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorName_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorName(System.Int32)">
+  GetDoorName(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L655"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the given door.<br>
+You can get the door index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetDoorByGridPositionAndDirection_PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_Grid_GridDirection_">GetDoorByGridPositionAndDirection(GridPosition, GridDirection)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_">RegisterDoorEvents(Transform, DoorPassHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString64Bytes GetDoorName(int door)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door you want to get the name of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>Name of the door. Use <span class="xref">Unity.Collections.FixedString64Bytes.ToString()</span> if you need a normal string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetGridPositionFromWorldPosition_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetGridPositionFromWorldPosition*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetGridPositionFromWorldPosition_UnityEngine_Vector3_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetGridPositionFromWorldPosition(UnityEngine.Vector3)">
+  GetGridPositionFromWorldPosition(Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L850"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Turns the given world position into the corresponding grid position using <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_DungeonOriginWorldPosition">DungeonOriginWorldPosition</a> and <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RoomGridToWorld">RoomGridToWorld</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridPosition GetGridPositionFromWorldPosition(Vector3 worldPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>worldPosition</code> <span class="xref">Vector3</span></dt>
+    <dd><p>World position to turn into a grid position.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a></dt>
+    <dd><p>Grid position calculated from <code class="paramref">worldPosition</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_GetGridPositionFromWorldPosition_UnityEngine_Vector3__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>No validation is done here and the grid position may be invalid (negative sizes or sizes larger than the grid) if the given world position is outside the bounds of the dungeon.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetPathBetween_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetPathBetween*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetPathBetween_System_Collections_Generic_List_PWS_DungeonBlueprint_Grid_GridPosition__PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_World_CanMoveCheckCallback_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetPathBetween(System.Collections.Generic.List{PWS.DungeonBlueprint.Grid.GridPosition},PWS.DungeonBlueprint.Grid.GridPosition,PWS.DungeonBlueprint.Grid.GridPosition,PWS.DungeonBlueprint.World.CanMoveCheckCallback)">
+  GetPathBetween(List&lt;GridPosition&gt;, GridPosition, GridPosition, CanMoveCheckCallback)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the path between two rooms and fills it into the given list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetPathBetween(List&lt;GridPosition&gt; pathOutput, GridPosition start, GridPosition goal, CanMoveCheckCallback canMove = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathOutput</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a>&gt;</dt>
+    <dd><p>List that will be filled with all rooms along the path. Contains <code class="paramref">start</code> at index 0 and <code class="paramref">goal</code> at the last index.</p>
+</dd>
+    <dt><code>start</code> <a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a></dt>
+    <dd><p>Start position of the path.</p>
+</dd>
+    <dt><code>goal</code> <a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a></dt>
+    <dd><p>End position of the path.</p>
+</dd>
+    <dt><code>canMove</code> <a class="xref" href="PWS.DungeonBlueprint.World.CanMoveCheckCallback.html">CanMoveCheckCallback</a></dt>
+    <dd><p>Callback called during pathfinding to check if a move is legal. See <a class="xref" href="PWS.DungeonBlueprint.World.CanMoveCheckCallback.html">CanMoveCheckCallback</a>. If this is null, all moves are considered legal, as long as they stay inside a room or pass through a door between rooms.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_GetPathBetween_System_Collections_Generic_List_PWS_DungeonBlueprint_Grid_GridPosition__PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_World_CanMoveCheckCallback__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>You must pass a valid list as <code class="paramref">pathOutput</code>, which will be filled with the path in this method. This is to avoid managed allocations on every pathfinding query.<br>
+You likely should reuse the list across queries.<br>
+<code class="paramref">pathOutput</code> is cleared by the method.<br>
+If you pass a delegate instance as <code class="paramref">canMove</code>, you should make sure its performance impact is as low as possible. It may be called very often.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">pathOutput</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If no path between the rooms exists. This might indicate an invalid graph.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByGameObject_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByGameObject*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByGameObject_UnityEngine_GameObject_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByGameObject(UnityEngine.GameObject)">
+  GetRoomByGameObject(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L372"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the room index of the room with the given game object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetRoomByGameObject(GameObject gameObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>Game object you want to get the room for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room index with the given game object or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidNode">InvalidNode</a> if such a room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not ready.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByGridPosition_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByGridPosition*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByGridPosition_PWS_DungeonBlueprint_Grid_GridPosition_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByGridPosition(PWS.DungeonBlueprint.Grid.GridPosition)">
+  GetRoomByGridPosition(GridPosition)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the room index of the room with the given grid position.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetRoomByGridPosition(GridPosition gridPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPosition</code> <a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a></dt>
+    <dd><p>Grid position you want to get the room for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room index with the given grid position or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidNode">InvalidNode</a> if such a room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByName*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByName(Unity.Collections.FixedString64Bytes,System.Int32)">
+  GetRoomByName(FixedString64Bytes, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the room index of the room with the given name.<br>
+The room name is not necessarily unique, so you can pass an additional index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetRoomByName(FixedString64Bytes name, int repetitionIdx = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>Name you want to get the room for. Note that <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> can be implicitly converted into <span class="xref">Unity.Collections.FixedString64Bytes</span>, so you can pass <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> into this method.</p>
+</dd>
+    <dt><code>repetitionIdx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Optional index of the node if it was inserted repeatedly through a group node.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room index with the given name and index or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidNode">InvalidNode</a> if such a room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectedToRoom_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomConnectedToRoom*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectedToRoom_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomConnectedToRoom(System.Int32,System.Int32)">
+  GetRoomConnectedToRoom(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the room connected to the given room with the given index.<br>
+Useful for iterating through all connected rooms of a room. Use <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectionCount_System_Int32_">GetRoomConnectionCount(int)</a> to find out how many connected rooms there are.<br>
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetRoomConnectedToRoom(int room, int roomIdx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room you want to get the connected room for.</p>
+</dd>
+    <dt><code>roomIdx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Index of the connected room.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Connected room index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectedToRoom_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The index has no inherent meaning and there is no way to predict which connected room is at which index unless you have in-depth knowledge of the runtime graph instance given to the world.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">roomIdx</code> is negative or larger than <a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_NrAdjacenciesPerNode">NrAdjacenciesPerNode</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room is connected to fewer than <code class="paramref">roomIdx</code> rooms.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectionCount_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomConnectionCount*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectionCount_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomConnectionCount(System.Int32)">
+  GetRoomConnectionCount(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of doors (and thus rooms) connected to the given room.
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetRoomConnectionCount(int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room you want to get the number of doors for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of doors connected to the given room.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If no doors are connected to this room (which is not a valid state in general).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomData_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomData*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomData_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomData(System.Int32)">
+  GetRoomData(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the room data of the given room.<br>
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RoomDataSO GetRoomData(int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room you want to get the room data of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Data.RoomDataSO.html">RoomDataSO</a></dt>
+    <dd><p>Room data of the room.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the room data of the given room is not registered with the <a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomGameObject_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomGameObject*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomGameObject_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomGameObject(System.Int32)">
+  GetRoomGameObject(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the game object of the given room.<br>
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject GetRoomGameObject(int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room you want to get the game object of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd><p>Game object of the room.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not ready.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomGridPosition_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomGridPosition*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomGridPosition_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomGridPosition(System.Int32)">
+  GetRoomGridPosition(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the grid position of the given room.<br>
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridPosition GetRoomGridPosition(int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room you want to get the position of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a></dt>
+    <dd><p>Grid position of the room.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomName_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomName*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomName_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomName(System.Int32)">
+  GetRoomName(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the given room.<br>
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByGridPosition_PWS_DungeonBlueprint_Grid_GridPosition_">GetRoomByGridPosition(GridPosition)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString64Bytes GetRoomName(int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room you want to get the name of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>Name of the room. Use <span class="xref">Unity.Collections.FixedString64Bytes.ToString()</span> if you need a normal string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomSize_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomSize*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomSize_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomSize(System.Int32)">
+  GetRoomSize(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the size of the given room.<br>
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridSize GetRoomSize(int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room you want to get the size of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Grid.GridSize.html">GridSize</a></dt>
+    <dd><p>Size of the room.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the room data of the given room is not registered with the <a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomsConnectedToDoor_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomsConnectedToDoor*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomsConnectedToDoor_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomsConnectedToDoor(System.Int32)">
+  GetRoomsConnectedToDoor(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L737"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the rooms connected to the given door.
+You can get the door index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetDoorByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_">RegisterDoorEvents(Transform, DoorPassHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (int room1, int room2) GetRoomsConnectedToDoor(int door)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door you want to get the connected rooms of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.room1">room1</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.room2">room2</a>)</dt>
+    <dd><p>Tuple with room indices of the connected rooms.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomsConnectedToDoor_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>All doors are bidirectional. Therefore, the order of the rooms in the returned tuple has no inherent meaning. However, the return value is stable, so this function will always return the room indices in the same order for the same door if you do not reset the world.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the door is not connected to any rooms (which is not a valid state in general).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_IsDoorConnectedToRoom_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.IsDoorConnectedToRoom*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_IsDoorConnectedToRoom_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.IsDoorConnectedToRoom(System.Int32,System.Int32)">
+  IsDoorConnectedToRoom(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L523"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the given room is connected to the given door.<br>
+You can get the room index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_">RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)</a>).<br>
+You can get the door index using another query (like <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetDoorByName(FixedString64Bytes, int)</a>) or from gameplay events (see <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_">RegisterDoorEvents(Transform, DoorPassHandler)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDoorConnectedToRoom(int room, int door)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room to check.</p>
+</dd>
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the room is connected to the door, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterDoorEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterDoorEvents(UnityEngine.Transform,PWS.DungeonBlueprint.World.DoorPassHandler)">
+  RegisterDoorEvents(Transform, DoorPassHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L797"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts tracking the given transform for door events, which will cause the given delegate to be called whenever the transform passes through a door.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterDoorEvents(Transform tracked, DoorPassHandler onPass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to track.</p>
+</dd>
+    <dt><code>onPass</code> <a class="xref" href="PWS.DungeonBlueprint.World.DoorPassHandler.html">DoorPassHandler</a></dt>
+    <dd><p>Callback for door pass events.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">onPass</code> is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterDoorEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_System_Int32_PWS_DungeonBlueprint_World_DoorPassHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterDoorEvents(UnityEngine.Transform,System.Int32,PWS.DungeonBlueprint.World.DoorPassHandler)">
+  RegisterDoorEvents(Transform, int, DoorPassHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L808"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts tracking the given transform for door events on the given door, which will cause the given delegate to be called whenever the transform passes through the given door.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterDoorEvents(Transform tracked, int door, DoorPassHandler onPass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to track.</p>
+</dd>
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Callback for door pass events.</p>
+</dd>
+    <dt><code>onPass</code> <a class="xref" href="PWS.DungeonBlueprint.World.DoorPassHandler.html">DoorPassHandler</a></dt>
+    <dd><p>Callback for door pass events.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">onPass</code> is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterRoomEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterRoomEvents(UnityEngine.Transform,PWS.DungeonBlueprint.World.RoomEnterEventHandler,PWS.DungeonBlueprint.World.RoomStayEventHandler,PWS.DungeonBlueprint.World.RoomExitEventHandler)">
+  RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L600"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts tracking the given transform for room events, which will cause the given delegates to be called whenever the transform enters/stays in/exits a room.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterRoomEvents(Transform tracked, RoomEnterEventHandler onEnterRoom, RoomStayEventHandler onStayRoom, RoomExitEventHandler onExitRoom)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to track.</p>
+</dd>
+    <dt><code>onEnterRoom</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomEnterEventHandler.html">RoomEnterEventHandler</a></dt>
+    <dd><p>Callback for room enter events.</p>
+</dd>
+    <dt><code>onStayRoom</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomStayEventHandler.html">RoomStayEventHandler</a></dt>
+    <dd><p>Callback for room stay events.</p>
+</dd>
+    <dt><code>onExitRoom</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomExitEventHandler.html">RoomExitEventHandler</a></dt>
+    <dd><p>Callback for room exit events.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterRoomEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_System_Int32_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterRoomEvents(UnityEngine.Transform,System.Int32,PWS.DungeonBlueprint.World.RoomEnterEventHandler,PWS.DungeonBlueprint.World.RoomStayEventHandler,PWS.DungeonBlueprint.World.RoomExitEventHandler)">
+  RegisterRoomEvents(Transform, int, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts tracking the given transform for room events on the given room, which will cause the given delegates to be called whenever the transform enters/stays in/exits the given room.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterRoomEvents(Transform tracked, int room, RoomEnterEventHandler onEnterRoom, RoomStayEventHandler onStayRoom, RoomExitEventHandler onExitRoom)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to track.</p>
+</dd>
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room to check for the events.</p>
+</dd>
+    <dt><code>onEnterRoom</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomEnterEventHandler.html">RoomEnterEventHandler</a></dt>
+    <dd><p>Callback for room enter events.</p>
+</dd>
+    <dt><code>onStayRoom</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomStayEventHandler.html">RoomStayEventHandler</a></dt>
+    <dd><p>Callback for room stay events.</p>
+</dd>
+    <dt><code>onExitRoom</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomExitEventHandler.html">RoomExitEventHandler</a></dt>
+    <dd><p>Callback for room exit events.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_Reset_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.Reset*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_Reset" data-uid="PWS.DungeonBlueprint.World.DBPWorld.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets the world to its initial state.<br>
+Any current dungeon will be despawned and any events and queries will stop working.<br>
+You can call <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_Setup_PWS_DungeonBlueprint_Runtime_RuntimeGraph_ReadOnly_PWS_DungeonBlueprint_Core_DBPWorldSettings_">Setup(ReadOnly, DBPWorldSettings)</a> again to spawn a new dungeon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_Reset_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Calling this will invoke <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_OnWorldReset">OnWorldReset</a> with false as second parameter, indicating that the world instance may be reused.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_Setup_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.Setup*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_Setup_PWS_DungeonBlueprint_Runtime_RuntimeGraph_ReadOnly_PWS_DungeonBlueprint_Core_DBPWorldSettings_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.Setup(PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly,PWS.DungeonBlueprint.Core.DBPWorldSettings)">
+  Setup(ReadOnly, DBPWorldSettings)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets up the world. You must call this before the world can spawn the dungeon.<br>
+Calling this resets the world so you can just call this again to spawn a new dungeon without calling <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_Reset">Reset()</a> manually.<br>
+However, this will lead to the current dungeon despawning immediately, even if the new dungeon spawns asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Setup(RuntimeGraph.ReadOnly runtimeGraph, DBPWorldSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runtimeGraph</code> <a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.html">RuntimeGraph</a>.<a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.html">ReadOnly</a></dt>
+    <dd><p>Runtime graph that contains all information about the dungeon that will be spawned.</p>
+</dd>
+    <dt><code>settings</code> <a class="xref" href="PWS.DungeonBlueprint.Core.DBPWorldSettings.html">DBPWorldSettings</a></dt>
+    <dd><p>Additional settings needed by the world.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_Setup_PWS_DungeonBlueprint_Runtime_RuntimeGraph_ReadOnly_PWS_DungeonBlueprint_Core_DBPWorldSettings__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><b>CRITICAL MEMORY LIFETIME WARNING:</b><br>
+The world does not copy the memory in <code class="paramref">runtimeGraph</code>.<br>
+If the runtime graph instance you pass is disposed, the memory is freed and this world becomes invalid.<br>
+This happens automatically if this instance was generated through a <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html">DBPPipeline</a> and that pipeline is disposed, reset or set up again.
+<br>
+To keep the world active while reusing the pipeline, use <a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_ReadOnly_DeepCopyAlloc_PWS_DungeonBlueprint_Runtime_RuntimeGraph__">DeepCopyAlloc(out RuntimeGraph)</a>:</p>
+<pre><code class="lang-csharp">pipeline.Runtime.DeepCopyAlloc(out RuntimeGraph copy); // Now you own the copy's memory and must dispose it yourself
+world.Setup(copy.AsReadOnly(), settings);</code></pre>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">runtimeGraph</code> is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">settings</code> is invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_Tick_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.Tick*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_Tick" data-uid="PWS.DungeonBlueprint.World.DBPWorld.Tick">
+  Tick()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs a single tick of the world. If the world is not set up, this is a noop.<br>
+A tick consists of continuing the spawning process until <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_IsReady">IsReady</a> is true,
+afterward it checks gameplay events you have subscribed to.
+Therefore, you must continue calling this even after the dungeon is fully spawned,
+unless you are not using any gameplay events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Tick()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_World_DBPWorld_Tick_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The tick rate is determined by your code and may be both fixed or variable.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomByEntryPortalName_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomByEntryPortalName_Unity_Collections_FixedString64Bytes_System_Int32__" data-uid="PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes,System.Int32@)">
+  TryGetRoomByEntryPortalName(FixedString64Bytes, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L559"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get the room that was connected to an entry portal with the given name in the mission graph the dungeon was generated on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetRoomByEntryPortalName(FixedString64Bytes portalName, out int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>portalName</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>Entry portal name to find the room for. Note that <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> can be implicitly converted into <span class="xref">Unity.Collections.FixedString64Bytes</span>, so you can pass <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> into this method.</p>
+</dd>
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Output parameter that will contain the room index of the room that was connected to the given entry portal if the node was connected to one, otherwise <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidNode">InvalidNode</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">portalName</code> was the name of an entry portal a room was connected to in the mission graph, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomByExitPortalName_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomByExitPortalName_Unity_Collections_FixedString64Bytes_System_Int32__" data-uid="PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName(Unity.Collections.FixedString64Bytes,System.Int32@)">
+  TryGetRoomByExitPortalName(FixedString64Bytes, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get the room that was connected to an exit portal with the given name in the mission graph the dungeon was generated on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetRoomByExitPortalName(FixedString64Bytes portalName, out int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>portalName</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>Exit portal name to find the room for. Note that <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> can be implicitly converted into <span class="xref">Unity.Collections.FixedString64Bytes</span>, so you can pass <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> into this method.</p>
+</dd>
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Output parameter that will contain the room index of the room that was connected to the given exit portal if the node was connected to one, otherwise <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidNode">InvalidNode</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">portalName</code> was the name of an exit portal a room was connected to in the mission graph, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomEntryPortalName_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomEntryPortalName_System_Int32_Unity_Collections_FixedString64Bytes__" data-uid="PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName(System.Int32,Unity.Collections.FixedString64Bytes@)">
+  TryGetRoomEntryPortalName(int, out FixedString64Bytes)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get the name of the entry portal the given room was connected to in the mission graph the dungeon was generated on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetRoomEntryPortalName(int room, out FixedString64Bytes portalName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room to get the entry portal name of.</p>
+</dd>
+    <dt><code>portalName</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>Output parameter that will contain the name of the entry portal if the node was connected to one, otherwise default(FixedString64Bytes). Use <span class="xref">Unity.Collections.FixedString64Bytes.ToString()</span> if you need a normal string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">room</code> was connected to an entry portal in the mission graph, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomExitPortalName_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomExitPortalName_System_Int32_Unity_Collections_FixedString64Bytes__" data-uid="PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName(System.Int32,Unity.Collections.FixedString64Bytes@)">
+  TryGetRoomExitPortalName(int, out FixedString64Bytes)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L568"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get the name of the exit portal the given room was connected to in the mission graph the dungeon was generated on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetRoomExitPortalName(int room, out FixedString64Bytes portalName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room to get the exit portal name of.</p>
+</dd>
+    <dt><code>portalName</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>Output parameter that will contain the name of the entry exit if the node was connected to one, otherwise default(FixedString64Bytes). Use <span class="xref">Unity.Collections.FixedString64Bytes.ToString()</span> if you need a normal string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if <code class="paramref">room</code> was connected to an exit portal in the mission graph, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_UnityEngine_Transform_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform)">
+  UnregisterDoorEvents(Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L816"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops tracking the given transform for door events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterDoorEvents(Transform tracked)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to stop tracking.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is not being tracked.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform,PWS.DungeonBlueprint.World.DoorPassHandler)">
+  UnregisterDoorEvents(Transform, DoorPassHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L827"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops tracking the given transform for door events with the given callbacks.<br>
+Should the transform be registered for door events with multiple different callbacks, this will not unregister the transform tracking with other callbacks than the one given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterDoorEvents(Transform tracked, DoorPassHandler onPass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to stop tracking.</p>
+</dd>
+    <dt><code>onPass</code> <a class="xref" href="PWS.DungeonBlueprint.World.DoorPassHandler.html">DoorPassHandler</a></dt>
+    <dd><p>Door pass event handler the given transform is being tracked with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">onPass</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is not being tracked.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_UnityEngine_Transform_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform,System.Int32)">
+  UnregisterDoorEvents(Transform, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L838"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops tracking the given transform for door events for the given door.<br>
+Should the transform be registered for door events for multiple door, this will not unregister the transform tracking for other door than the one given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterDoorEvents(Transform tracked, int door)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to stop tracking.</p>
+</dd>
+    <dt><code>door</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Door the given transform is being tracked for.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given door does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is not being tracked.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_UnityEngine_Transform_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform)">
+  UnregisterRoomEvents(Transform)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L620"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops tracking the given transform for room events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterRoomEvents(Transform tracked)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to stop tracking.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is not being tracked.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform,PWS.DungeonBlueprint.World.RoomEnterEventHandler,PWS.DungeonBlueprint.World.RoomStayEventHandler,PWS.DungeonBlueprint.World.RoomExitEventHandler)">
+  UnregisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L632"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops tracking the given transform for room events with the given callbacks.<br>
+Should the transform be registered for room events with multiple different callbacks, this will not unregister the transform tracking with other callbacks than the one given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterRoomEvents(Transform tracked, RoomEnterEventHandler onEnter, RoomStayEventHandler onStay, RoomExitEventHandler onExit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to stop tracking.</p>
+</dd>
+    <dt><code>onEnter</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomEnterEventHandler.html">RoomEnterEventHandler</a></dt>
+    <dd><p>Room enter event handler the given transform is being tracked with.</p>
+</dd>
+    <dt><code>onStay</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomStayEventHandler.html">RoomStayEventHandler</a></dt>
+    <dd><p>Room stay event handler the given transform is being tracked with.</p>
+</dd>
+    <dt><code>onExit</code> <a class="xref" href="PWS.DungeonBlueprint.World.RoomExitEventHandler.html">RoomExitEventHandler</a></dt>
+    <dd><p>Room exit event handler the given transform is being tracked with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is not being tracked.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_UnityEngine_Transform_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform,System.Int32)">
+  UnregisterRoomEvents(Transform, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L643"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops tracking the given transform for room events for the given room.<br>
+Should the transform be registered for room events for multiple rooms, this will not unregister the transform tracking for other rooms than the one given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterRoomEvents(Transform tracked, int room)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tracked</code> <span class="xref">Transform</span></dt>
+    <dd><p>Transform to stop tracking.</p>
+</dd>
+    <dt><code>room</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Room the given transform is being tracked for.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">tracked</code> is not being tracked.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the given room does not exist.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_OnWorldIsReady" data-uid="PWS.DungeonBlueprint.World.DBPWorld.OnWorldIsReady">
+  OnWorldIsReady
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event invoked when the world is ready for gameplay interactions like events and querying.<br>
+The parameter of the delegate is the world object which is ready.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;DBPWorld&gt; OnWorldIsReady</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html">DBPWorld</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="PWS_DungeonBlueprint_World_DBPWorld_OnWorldReset" data-uid="PWS.DungeonBlueprint.World.DBPWorld.OnWorldReset">
+  OnWorldReset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event invoked when the world is reset. After this event is invoked, the world should not be used for gameplay events and queries until another <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_OnWorldIsReady">OnWorldIsReady</a> event is invoked.<br>
+The event is only invoked if the world was ready before. If you call <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_Reset">Reset()</a> before the world was ready, the event is not invoked.<br>
+The first parameter of the delegate is the world which was reset, the second parameter indicates whether the world is in the process of being disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;DBPWorld, bool&gt; OnWorldReset</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html">DBPWorld</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L77" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

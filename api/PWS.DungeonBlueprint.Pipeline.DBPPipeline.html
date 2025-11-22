@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DBPPipeline | Dungeon Blueprint - 3D Dungeon Generator </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DBPPipeline | Dungeon Blueprint - 3D Dungeon Generator ">
+      
+      <meta name="description" content="Dungeon generation pipeline. This is one of the main components of Dungeon Blueprint. Pipeline takes a  and a few additional settings and runs through various built-in transformation steps resulting in a , which can then be spawned. All work done in the pipeline is independent of the Unity scene, and you can run the entire pipeline without affecting the scene. The interaction with the scene is handled by .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/new/main/apiSpec/new?filename=PWS_DungeonBlueprint_Pipeline_DBPPipeline.md&amp;value=---%0Auid%3A%20PWS.DungeonBlueprint.Pipeline.DBPPipeline%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Dungeon Blueprint">
+            Dungeon Blueprint
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline">
+
+
+
+  <h1 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline" class="text-break">
+Class DBPPipeline  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PWS.html">PWS</a>.<a class="xref" href="PWS.DungeonBlueprint.html">DungeonBlueprint</a>.<a class="xref" href="PWS.DungeonBlueprint.Pipeline.html">Pipeline</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Dungeon generation pipeline. This is one of the main components of Dungeon Blueprint.<br>
+Pipeline takes a <a class="xref" href="PWS.DungeonBlueprint.Mission.MissionGraph.html">MissionGraph</a> and a few additional settings and runs through various built-in transformation steps resulting in a <a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.html">RuntimeGraph</a>, which can then be spawned.<br>
+All work done in the pipeline is independent of the Unity scene, and you can run the entire pipeline without affecting the scene.<br>
+The interaction with the scene is handled by <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html">DBPWorld</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DBPPipeline : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DBPPipeline</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_examples">Examples</h2>
+  <p>Generate a dungeon at runtime</p>
+<pre><code class="lang-csharp">var pipeline = new DBPPipeline(registry);
+pipeline.Setup(mission, seed, entryInfo, settings);
+pipeline.WantsToRun = true;
+
+while(pipeline.Tick()) { /* wait */ }
+
+if(pipeline.IsValid) { /* pipeline.Runtime has a valid runtime graph instance. */ }</code></pre>
+
+
+  <h2 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Additionally, you may register custom steps with the pipeline to modify the graph transformation.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline__ctor_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.#ctor*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline__ctor_PWS_DungeonBlueprint_Core_DBPRegistry_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.#ctor(PWS.DungeonBlueprint.Core.DBPRegistry)">
+  DBPPipeline(DBPRegistry)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html">DBPPipeline</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DBPPipeline(DBPRegistry registry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>registry</code> <a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a></dt>
+    <dd><p>Registry your rooms and doors are registered with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Construction_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Construction*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Construction" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Construction">
+  Construction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construction created during the pipeline run in stage <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Construction">Construction</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConstructionGraph.ReadOnly Construction { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Construction.ConstructionGraph.html">ConstructionGraph</a>.<a class="xref" href="PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.html">ReadOnly</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Construction_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><b>
+Instance is disposed when the pipeline is disposed, reset or set up again. The result is that you can not use this instance and rerun the pipeline in the meantime.
+</b>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_ConstructionUsedLoopIterations_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.ConstructionUsedLoopIterations*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_ConstructionUsedLoopIterations" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.ConstructionUsedLoopIterations">
+  ConstructionUsedLoopIterations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How many loop iterations the construction conversion took.<br>
+Not a valid value until the built-in construction step was completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ConstructionUsedLoopIterations { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Core.DBPPipelineSettings.html#PWS_DungeonBlueprint_Core_DBPPipelineSettings_ConstructionMaxLoopIterations">ConstructionMaxLoopIterations</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_IsFinished_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.IsFinished*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_IsFinished" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.IsFinished">
+  IsFinished
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the pipeline has finished successfully.<br>
+This is the case when the pipeline was initialized and all steps have executed successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFinished { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_IsValid_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.IsValid*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_IsValid" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.IsValid">
+  IsValid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the pipeline run has been successful so far.<br>
+This is true if the pipeline has been initialized and all steps executed so far returned true in <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Mission_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Mission*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Mission" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Mission">
+  Mission
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mission this pipeline is running on. This is passed to the pipeline in <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_Setup_PWS_DungeonBlueprint_Mission_MissionGraph_System_UInt32_PWS_DungeonBlueprint_Pipeline_EntryRoomInfo_PWS_DungeonBlueprint_Core_DBPPipelineSettings_System_Object_">Setup(MissionGraph, uint, EntryRoomInfo, DBPPipelineSettings, object)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MissionGraph.ReadOnly Mission { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Mission.MissionGraph.html">MissionGraph</a>.<a class="xref" href="PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.html">ReadOnly</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_ResolvedMission_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.ResolvedMission*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_ResolvedMission" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.ResolvedMission">
+  ResolvedMission
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolved mission created during the pipeline run in stage <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_ResolveMission">ResolveMission</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResolvedMissionGraph.ReadOnly ResolvedMission { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.html">ResolvedMissionGraph</a>.<a class="xref" href="PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.html">ReadOnly</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_ResolvedMission_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><b>
+Instance is disposed when the pipeline is disposed, reset or set up again. The result is that you can not use this instance and rerun the pipeline in the meantime.
+</b>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Runtime_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Runtime*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Runtime" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Runtime">
+  Runtime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runtime created during the pipeline run in stage <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Runtime">Runtime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RuntimeGraph.ReadOnly Runtime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.html">RuntimeGraph</a>.<a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.html">ReadOnly</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Runtime_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><b>
+Instance is disposed when the pipeline is disposed, reset or set up again. The result is that you can not use this instance and rerun the pipeline in the meantime.<br>
+Since the runtime graph is required for use in <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html">DBPWorld</a>, there is particular caution needed.<br>
+If you want to keep the world usable while rerunning the pipeline, you may want to create a full copy of the memory using <a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_ReadOnly_DeepCopyAlloc_PWS_DungeonBlueprint_Runtime_RuntimeGraph__">DeepCopyAlloc(out RuntimeGraph)</a>.
+</b>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Stage_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Stage*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Stage" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Stage">
+  Stage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current stage of the pipeline.<br>
+<a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_None">None</a> when the pipeline is not initialized.<br>
+<a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Finished">Finished</a> when the pipeline has run through all its steps.<br>
+Otherwise, <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Stage">Stage</a> of the current step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DBPPipelineStage Stage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html">DBPPipelineStage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Topology_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Topology*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Topology" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Topology">
+  Topology
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Topology created during the pipeline run in stage <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Topology">Topology</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopologyGraph.ReadOnly Topology { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html">TopologyGraph</a>.<a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.html">ReadOnly</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Topology_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><b>
+Instance is disposed when the pipeline is disposed, reset or set up again. The result is that you can not use this instance and rerun the pipeline in the meantime.
+</b>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_WantsToRun_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.WantsToRun*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_WantsToRun" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.WantsToRun">
+  WantsToRun
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the pipeline wants to run. This is set to true only by user code.<br>
+The pipeline may set this to false when a step fails or the pipeline finished all steps.<br>
+Changing this from true to false invokes <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_OnStopRunning">OnStopRunning</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WantsToRun { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Dispose_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Dispose*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Dispose" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Frees native memory.
+You must not continue using this instance after calling this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_RegisterStep_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.RegisterStep*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_RegisterStep_PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.RegisterStep(PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep)">
+  RegisterStep(IDBPPipelineStep)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a new step to the pipeline. The order in the pipeline is dependent on the implementation of the pipeline step interface.<br>
+You must not add pipeline steps while the pipeline is running. If you want to add steps to a pipeline that is running, either let the pipeline finish first or call <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_Reset">Reset()</a> on it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterStep(IDBPPipelineStep step)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>step</code> <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html">IDBPPipelineStep</a></dt>
+    <dd><p>Step to add to the pipeline.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">step</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the stage of <code class="paramref">step</code> is <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_None">None</a> or <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Finished">Finished</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the pipeline is in the middle of a run.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html">IDBPPipelineStep</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Reset_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Reset*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Reset" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets the pipeline to its original state.<br>
+Pipeline can not run after it has been reset until you call <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_Setup_PWS_DungeonBlueprint_Mission_MissionGraph_System_UInt32_PWS_DungeonBlueprint_Pipeline_EntryRoomInfo_PWS_DungeonBlueprint_Core_DBPPipelineSettings_System_Object_">Setup(MissionGraph, uint, EntryRoomInfo, DBPPipelineSettings, object)</a> again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_RestartWithSeed_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.RestartWithSeed*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_RestartWithSeed_System_UInt32_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.RestartWithSeed(System.UInt32)">
+  RestartWithSeed(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restarts the pipeline with a different seed for random number generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RestartWithSeed(uint seed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>seed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>New seed for random number generation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_RestartWithSeed_System_UInt32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Calling this is equivalent to calling <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_Setup_PWS_DungeonBlueprint_Mission_MissionGraph_System_UInt32_PWS_DungeonBlueprint_Pipeline_EntryRoomInfo_PWS_DungeonBlueprint_Core_DBPPipelineSettings_System_Object_">Setup(MissionGraph, uint, EntryRoomInfo, DBPPipelineSettings, object)</a> with the same parameters as before except for the different seed.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Setup_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Setup*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Setup_PWS_DungeonBlueprint_Mission_MissionGraph_System_UInt32_PWS_DungeonBlueprint_Pipeline_EntryRoomInfo_PWS_DungeonBlueprint_Core_DBPPipelineSettings_System_Object_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Setup(PWS.DungeonBlueprint.Mission.MissionGraph,System.UInt32,PWS.DungeonBlueprint.Pipeline.EntryRoomInfo,PWS.DungeonBlueprint.Core.DBPPipelineSettings,System.Object)">
+  Setup(MissionGraph, uint, EntryRoomInfo, DBPPipelineSettings, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets up the pipeline for a run. You must call this before the pipeline can run.<br>
+Calling this resets the pipeline so you can alternate between setting up the pipeline and running it without having to call <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_Reset">Reset()</a> manually.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Setup(MissionGraph missionGraph, uint seed, EntryRoomInfo entryRoomInfo, DBPPipelineSettings settings, object customStateData = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionGraph</code> <a class="xref" href="PWS.DungeonBlueprint.Mission.MissionGraph.html">MissionGraph</a></dt>
+    <dd><p>Mission the pipeline will base its run on. See <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_Mission">Mission</a>.</p>
+</dd>
+    <dt><code>seed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Seed used by the random number generator for dungeon generation.</p>
+</dd>
+    <dt><code>entryRoomInfo</code> <a class="xref" href="PWS.DungeonBlueprint.Pipeline.EntryRoomInfo.html">EntryRoomInfo</a></dt>
+    <dd><p>Information about the entry room.</p>
+</dd>
+    <dt><code>settings</code> <a class="xref" href="PWS.DungeonBlueprint.Core.DBPPipelineSettings.html">DBPPipelineSettings</a></dt>
+    <dd><p>Additional settings used to set up a pipeline run.</p>
+</dd>
+    <dt><code>customStateData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Additional state data passed to pipeline steps. See <a class="xref" href="PWS.DungeonBlueprint.Pipeline.PipelineState.html#PWS_DungeonBlueprint_Pipeline_PipelineState_UserData">UserData</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Setup_PWS_DungeonBlueprint_Mission_MissionGraph_System_UInt32_PWS_DungeonBlueprint_Pipeline_EntryRoomInfo_PWS_DungeonBlueprint_Core_DBPPipelineSettings_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Once the pipeline has been set up, you may call <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_RestartWithSeed_System_UInt32_">RestartWithSeed(uint)</a> instead of this. However, you must call this for the first run of the pipeline.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>If <code class="paramref">missionGraph</code> is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">entryRoomInfo</code> or <code class="paramref">settings</code> are invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Tick_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Tick*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Tick" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.Tick">
+  Tick()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs a single tick of the pipeline.<br>
+If <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_WantsToRun">WantsToRun</a> is false, this is a noop.<br>
+Also checks itself whether the pipeline is initialized and not yet finished.<br>
+A tick consists of either scheduling or completing the current pipeline step or counting the current step's tick if the asynchronous work is not yet finished and the configured maximum number of ticks is not reached yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Tick()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the pipeline has more work to do (and so you should continue calling this method to finish it), false otherwise. Therefore, false could mean the pipeline has failed or that it has finished successfully.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_Tick_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Tick rate is determined by your code and may be both fixed or variable.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_UnregisterStep_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.UnregisterStep*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_UnregisterStep_PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.UnregisterStep(PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep)">
+  UnregisterStep(IDBPPipelineStep)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a step from the pipeline.
+You must not remove pipeline steps while the pipeline is running. If you want to remove steps from a pipeline that is running, either let the pipeline finish first or call <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_Reset">Reset()</a> on it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterStep(IDBPPipelineStep step)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>step</code> <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html">IDBPPipelineStep</a></dt>
+    <dd><p>Step to remove from the pipeline.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If <code class="paramref">step</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the pipeline is in the middle of a run.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <code class="paramref">step</code> is not in the pipeline.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_DBPPipeline_OnStopRunning" data-uid="PWS.DungeonBlueprint.Pipeline.DBPPipeline.OnStopRunning">
+  OnStopRunning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event invoked when the pipeline stops its run.<br>
+There are multiple reasons why the pipeline might stop:<br></p>
+<ul>
+<li>a step failed<br></li>
+<li>all steps finished<br></li>
+<li><a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_WantsToRun">WantsToRun</a> was set to false by user code<br>
+The parameter of the delegate is the pipeline object which stopped its run.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;DBPPipeline&gt; OnStopRunning</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html">DBPPipeline</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html">IDBPPipelineStep</a></div>
+  </div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/DBPPipeline.cs/#L38" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

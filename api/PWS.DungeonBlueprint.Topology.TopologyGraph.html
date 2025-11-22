@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct TopologyGraph | Dungeon Blueprint - 3D Dungeon Generator </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct TopologyGraph | Dungeon Blueprint - 3D Dungeon Generator ">
+      
+      <meta name="description" content="Main data structure for the  phase of the transformation pipeline. This is the first phase where each node represents a room in the final dungeon and each edge represents a door in the final dungeon.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/new/main/apiSpec/new?filename=PWS_DungeonBlueprint_Topology_TopologyGraph.md&amp;value=---%0Auid%3A%20PWS.DungeonBlueprint.Topology.TopologyGraph%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Dungeon Blueprint">
+            Dungeon Blueprint
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph">
+
+
+
+  <h1 id="PWS_DungeonBlueprint_Topology_TopologyGraph" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph" class="text-break">
+Struct TopologyGraph  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PWS.html">PWS</a>.<a class="xref" href="PWS.DungeonBlueprint.html">DungeonBlueprint</a>.<a class="xref" href="PWS.DungeonBlueprint.Topology.html">Topology</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Main data structure for the <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Topology">Topology</a> phase of the transformation pipeline.<br>
+This is the first phase where each node represents a room in the final dungeon and each edge represents a door in the final dungeon.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[BurstCompile]
+public struct TopologyGraph : IDisposable</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_AdjacencySlotToEdge" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.AdjacencySlotToEdge">
+  AdjacencySlotToEdge
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mapping from adjacency to edge.<br>
+Every valid adjacency belongs to an edge. Since adjacencies are always bidirectional and thus take up two slots in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeAdjacencies">NodeAdjacencies</a>, an edge combines two adjacency slots into a single edge, helping to reduce data duplication.<br>
+Every index in the list is either an index for an edge collection or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidEdge">InvalidEdge</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeList&lt;int&gt; AdjacencySlotToEdge</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NativeList</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_AdjacencySlotToEdge_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This object owns this native memory and frees it in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a>.<br>
+This list is in parallel with <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_AdjacencySlotToEdge">AdjacencySlotToEdge</a>, meaning the lists contain information about the same adjacency at a given index.<br></p>
+</div>
+
+
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeDoorDataCollectionIdx" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.EdgeDoorDataCollectionIdx">
+  EdgeDoorDataCollectionIdx
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Door collection identifier of each edge.<br>
+Identifier stems from the <a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeList&lt;int&gt; EdgeDoorDataCollectionIdx</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NativeList</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeDoorDataCollectionIdx_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This list is in parallel with <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeNames">EdgeNames</a>, meaning the lists contain information about the same edge at a given index.<br>
+This object owns this native memory and frees it in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeNames">EdgeNames</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeNames" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.EdgeNames">
+  EdgeNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Name of each edge. Only door nodes from the mission are turned into edges in the topology graph, so these are only the door names.<br>
+Room nodes are instead turned into nodes and their names are available in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeNames">NodeNames</a>.
+The name is carried all the way into the spawned dungeon and will then be queryable with <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetDoorByName(FixedString64Bytes, int)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeList&lt;FixedString64Bytes&gt; EdgeNames</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NativeList</span>&lt;<span class="xref">FixedString64Bytes</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeNames_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This list is in parallel with <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeDoorDataCollectionIdx">EdgeDoorDataCollectionIdx</a>, meaning the lists contain information about the same edge at a given index.<br>
+This object owns this native memory and frees it in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeDoorDataCollectionIdx">EdgeDoorDataCollectionIdx</a></div>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeNames">NodeNames</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeAdjacencies" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.NodeAdjacencies">
+  NodeAdjacencies
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adjacencies between nodes.<br>
+Adjacencies of a given node <code>n</code>, are in the range <code>[n<em>NrAdjacenciesPerNode, n</em>NrAdjacenciesPerNode+NrAdjacenciesPerNode)</code>.<br>
+Total length of this collection is the <code>number of nodes * NrAdjacenciesPerNode</code>.<br>
+Every index is either a node or <a class="xref" href="PWS.DungeonBlueprint.Core.DBPConstants.html#PWS_DungeonBlueprint_Core_DBPConstants_InvalidNode">InvalidNode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeList&lt;int&gt; NodeAdjacencies</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NativeList</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeAdjacencies_examples">Examples</h4>
+  <p>If <code>NrAdjacenciesPerNode=3</code>, the adjacencies for node <code>0</code> are at the indices 0, 1 and 2 (the range is <code>[0<em>3=0, 0</em>3+3=3)</code>).<br>
+If <code>NrAdjacenciesPerNode=2</code>, the adjacencies for node <code>4</code> are at the indices 8 and 9 (the range is <code>[4<em>2=8, 4</em>2+2=10)</code>).<br></p>
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeAdjacencies_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Adjacencies are always bidirectional, so if a node has an adjacency to another node, the second node must also have an adjacency to the first node.<br>
+This object owns this native memory and frees it in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a>.<br>
+This list is in parallel with <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_AdjacencySlotToEdge">AdjacencySlotToEdge</a>, meaning the lists contain information about the same adjacency at a given index.<br></p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NrAdjacenciesPerNode">NrAdjacenciesPerNode</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeEntryPortalNames" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.NodeEntryPortalNames">
+  NodeEntryPortalNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional data about some nodes.<br>
+This data only exists for nodes that were connected to a portal node with portal type <a class="xref" href="PWS.DungeonBlueprint.Mission.MissionPortalType.html#PWS_DungeonBlueprint_Mission_MissionPortalType_Entrance">Entrance</a> in the mission graph before the topology conversion.<br>
+Portals do not exist past the mission graph stage, but we keep track of the names so we can query them later.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeHashMap&lt;int, FixedString64Bytes&gt; NodeEntryPortalNames</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NativeHashMap</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <span class="xref">FixedString64Bytes</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeEntryPortalNames_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This object owns this native memory and frees it in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeExitPortalNames">NodeExitPortalNames</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeExitPortalNames" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.NodeExitPortalNames">
+  NodeExitPortalNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional data about some nodes.<br>
+This data only exists for nodes that were connected to a portal node with portal type <a class="xref" href="PWS.DungeonBlueprint.Mission.MissionPortalType.html#PWS_DungeonBlueprint_Mission_MissionPortalType_Exit">Exit</a> in the mission graph before the topology conversion.<br>
+Portals do not exist past the mission graph stage, but we keep track of the names so we can query them later.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeHashMap&lt;int, FixedString64Bytes&gt; NodeExitPortalNames</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NativeHashMap</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <span class="xref">FixedString64Bytes</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeExitPortalNames_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This object owns this native memory and frees it in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeEntryPortalNames">NodeEntryPortalNames</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeNames" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.NodeNames">
+  NodeNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Name of each node. Only room nodes from the mission are turned into nodes in the topology graph, so these are only the room names.<br>
+Door nodes are instead turned into edges and their names are available in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeNames">EdgeNames</a>.
+The name is carried all the way into the spawned dungeon and will then be queryable with <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_">GetRoomByName(FixedString64Bytes, int)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeList&lt;FixedString64Bytes&gt; NodeNames</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NativeList</span>&lt;<span class="xref">FixedString64Bytes</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeNames_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This list is in parallel with <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeRoomDataCollectionIdx">NodeRoomDataCollectionIdx</a>, meaning the lists contain information about the same node at a given index.<br>
+This object owns this native memory and frees it in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeRoomDataCollectionIdx">NodeRoomDataCollectionIdx</a></div>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_EdgeNames">EdgeNames</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeRoomDataCollectionIdx" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.NodeRoomDataCollectionIdx">
+  NodeRoomDataCollectionIdx
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Room collection identifier of each node.<br>
+Identifier stems from the <a class="xref" href="PWS.DungeonBlueprint.Core.DBPRegistry.html">DBPRegistry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeList&lt;int&gt; NodeRoomDataCollectionIdx</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NativeList</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_NodeRoomDataCollectionIdx_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This list is in parallel with <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeNames">NodeNames</a>, meaning the lists contain information about the same node at a given index.<br>
+This object owns this native memory and frees it in <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a>.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeNames">NodeNames</a></div>
+    </dd>
+  </dl>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_NrAdjacenciesPerNode" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.NrAdjacenciesPerNode">
+  NrAdjacenciesPerNode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum number of adjacencies any node in the graph has.<br>
+This is used to determine how many slots are reserved for each node in the adjacency collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NrAdjacenciesPerNode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Topology_TopologyGraph_AsReadOnly_" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.AsReadOnly*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_AsReadOnly" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.AsReadOnly">
+  AsReadOnly()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new read-only wrapper and returns it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopologyGraph.ReadOnly AsReadOnly()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html">TopologyGraph</a>.<a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.html">ReadOnly</a></dt>
+    <dd><p>Read-only view of this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html">TopologyGraph</a>.<a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.html">ReadOnly</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="PWS_DungeonBlueprint_Topology_TopologyGraph_CreateAlloc_" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.CreateAlloc*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_CreateAlloc_System_Int32_System_Int32_PWS_DungeonBlueprint_Topology_TopologyGraph__" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.CreateAlloc(System.Int32,System.Int32,PWS.DungeonBlueprint.Topology.TopologyGraph@)">
+  CreateAlloc(int, int, out TopologyGraph)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new topology graph instance and allocates all native collections for the given number of nodes and adjacencies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[BurstCompile]
+public static void CreateAlloc(int estimatedNrNodes, int estimatedNrAdjacenciesPerNode, out TopologyGraph topologyGraph)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>estimatedNrNodes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of nodes the topology graph is estimated to have.</p>
+</dd>
+    <dt><code>estimatedNrAdjacenciesPerNode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of adjacencies per node the topology graph is estimated to have.</p>
+</dd>
+    <dt><code>topologyGraph</code> <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html">TopologyGraph</a></dt>
+    <dd><p>Output parameter that will contain the created <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html">TopologyGraph</a> instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Topology_TopologyGraph_CreateAlloc_System_Int32_System_Int32_PWS_DungeonBlueprint_Topology_TopologyGraph___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This allocates native memory with <span class="xref">Unity.Collections.Allocator.Persistent</span>. You must call <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose">Dispose()</a> to free it.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose_" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.Dispose*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Topology_TopologyGraph_Dispose" data-uid="PWS.DungeonBlueprint.Topology.TopologyGraph.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Frees native memory.
+You must not continue using this instance after calling this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Topology/TopologyGraph.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct RandomPicker | Dungeon Blueprint - 3D Dungeon Generator </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct RandomPicker | Dungeon Blueprint - 3D Dungeon Generator ">
+      
+      <meta name="description" content="Random number picker for picking numbers in an interval [0, max] where max is passed to the constructor. You may change the maximum number after construction with . Numbers are guaranteed to only be picked once, until  or  is called.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/new/main/apiSpec/new?filename=PWS_DungeonBlueprint_Util_RandomPicker.md&amp;value=---%0Auid%3A%20PWS.DungeonBlueprint.Util.RandomPicker%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Dungeon Blueprint">
+            Dungeon Blueprint
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="PWS.DungeonBlueprint.Util.RandomPicker">
+
+
+
+  <h1 id="PWS_DungeonBlueprint_Util_RandomPicker" data-uid="PWS.DungeonBlueprint.Util.RandomPicker" class="text-break">
+Struct RandomPicker  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PWS.html">PWS</a>.<a class="xref" href="PWS.DungeonBlueprint.html">DungeonBlueprint</a>.<a class="xref" href="PWS.DungeonBlueprint.Util.html">Util</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Random number picker for picking numbers in an interval [0, max] where max is passed to the constructor.
+You may change the maximum number after construction with <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__">ChangeRange(int, ref Random)</a>.<br>
+Numbers are guaranteed to only be picked once, until <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ResetSelection">ResetSelection()</a> or <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__">ChangeRange(int, ref Random)</a> is called.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct RandomPicker : IDisposable</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="PWS_DungeonBlueprint_Util_RandomPicker_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Pick probabilities are not guaranteed to be equally distributed.<br>
+This type encapsulates native memory. You must call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_Dispose">Dispose()</a> to free it.<br>
+This type contains custom <span class="xref">Unity.Profiling.ProfilerMarker</span> fields with the prefix &quot;RandomPicker&quot;.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker__ctor_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.#ctor*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker__ctor_System_Int32_Unity_Collections_AllocatorManager_AllocatorHandle_Unity_Mathematics_Random__" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.#ctor(System.Int32,Unity.Collections.AllocatorManager.AllocatorHandle,Unity.Mathematics.Random@)">
+  RandomPicker(int, AllocatorHandle, ref Random)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html">RandomPicker</a> to pick random numbers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RandomPicker(int length, AllocatorManager.AllocatorHandle allocator, ref Random random)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum number this picker can pick.</p>
+</dd>
+    <dt><code>allocator</code> <span class="xref">AllocatorManager</span>.<span class="xref">AllocatorHandle</span></dt>
+    <dd><p>Allocator used to allocate buffer for picked indices.</p>
+</dd>
+    <dt><code>random</code> <span class="xref">Random</span></dt>
+    <dd><p>Random state for random number generation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Util_RandomPicker__ctor_System_Int32_Unity_Collections_AllocatorManager_AllocatorHandle_Unity_Mathematics_Random___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This allocates O(length) memory using the given allocator handle. You must call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_Dispose">Dispose()</a> to free it.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>If <code class="paramref">length</code> is less or equal to 0 and ENABLE_UNITY_COLLECTIONS_CHECKS is defined.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_MustChangeRange" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.MustChangeRange">
+  MustChangeRange
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used to indicate that the range of this picker is invalid and should be changed.
+If this is true, you should call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__">ChangeRange(int, ref Random)</a> before continuing to use this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MustChangeRange</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Util_RandomPicker_MustChangeRange_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Never set to true internally. You need to recognize that the range needs to change externally, and you also need to call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__">ChangeRange(int, ref Random)</a> externally.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker_Current_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.Current*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_Current" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.Current">
+  Current
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the currently picked number.<br>
+This is idempotent. Getting the property multiple times in a row will not continue picking new numbers.
+Call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_Continue_Unity_Mathematics_Random__">Continue(ref Random)</a> to pick the next number and then get this property again to get the new picked number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Current { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>If Dispose() was already called on this instance and ENABLE_UNITY_COLLECTIONS_CHECKS is defined.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_MustChangeRange">MustChangeRange</a> is true and ENABLE_UNITY_COLLECTIONS_CHECKS is defined. Call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__">ChangeRange(int, ref Random)</a> before using this property.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>If no number is currently picked (i.e. all numbers were picked already and <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_Continue_Unity_Mathematics_Random__">Continue(ref Random)</a> has been called again) and ENABLE_UNITY_COLLECTIONS_CHECKS is defined. Check <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_HasCurrent">HasCurrent</a> before calling this getter to avoid this exception.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_HasCurrent">HasCurrent</a></div>
+    <div><a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_Continue_Unity_Mathematics_Random__">Continue(ref Random)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker_HasCurrent_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.HasCurrent*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_HasCurrent" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.HasCurrent">
+  HasCurrent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether this picker has a currently picked number.
+You should check this before using <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_Current">Current</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasCurrent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker_IsInitialized_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.IsInitialized*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_IsInitialized" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.IsInitialized">
+  IsInitialized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the allocated buffer is still valid.<br>
+True between calling <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker__ctor_System_Int32_Unity_Collections_AllocatorManager_AllocatorHandle_Unity_Mathematics_Random__">RandomPicker(int, AllocatorHandle, ref Random)</a> and calling <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_Dispose">Dispose()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInitialized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.ChangeRange*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.ChangeRange(System.Int32,Unity.Mathematics.Random@)">
+  ChangeRange(int, ref Random)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resizes the underlying array and resets the existing selection state.<br>
+After this method returns this instance looks the same as if it was originally
+created with the given random.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeRange(int max, ref Random random)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>New maximum number to pick randomly.</p>
+</dd>
+    <dt><code>random</code> <span class="xref">Random</span></dt>
+    <dd><p>Random instance for random number generation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>O(max) time, unless <code class="paramref">max</code> is the same as the old range, then O(1).<br>
+This may additionally allocate O(max) memory using the allocator originally given to this instance. See <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Resize(int, NativeArrayOptions)</a>. If new memory allocated, the old memory is freed automatically.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>If Dispose() was already called on this instance and ENABLE_UNITY_COLLECTIONS_CHECKS is defined.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>If <code class="paramref">max</code> is less or equal to 0 and ENABLE_UNITY_COLLECTIONS_CHECKS is defined.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker_Continue_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.Continue*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_Continue_Unity_Mathematics_Random__" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.Continue(Unity.Mathematics.Random@)">
+  Continue(ref Random)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Picks the next random number within the range of the picker.<br>
+A number will only ever be picked once until you call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ResetSelection">ResetSelection()</a> or <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__">ChangeRange(int, ref Random)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Continue(ref Random random)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>random</code> <span class="xref">Random</span></dt>
+    <dd><p>Random state for random number generation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>If Dispose() was already called on this instance and ENABLE_UNITY_COLLECTIONS_CHECKS is defined.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_MustChangeRange">MustChangeRange</a> is true and ENABLE_UNITY_COLLECTIONS_CHECKS is defined. Call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__">ChangeRange(int, ref Random)</a> before using this property.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker_Dispose_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.Dispose*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_Dispose" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Frees native memory.
+You must not continue using this instance after calling this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker_ResetSelection_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.ResetSelection*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_ResetSelection" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.ResetSelection">
+  ResetSelection()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets the selection.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetSelection()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Util_RandomPicker_ResetSelection_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Since the random indices are picked based on the state of the <span class="xref">Unity.Mathematics.Random</span> instance every time <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_Continue_Unity_Mathematics_Random__">Continue(ref Random)</a> is called,
+the picks can differ between resets.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>If Dispose() was already called on this instance and ENABLE_UNITY_COLLECTIONS_CHECKS is defined.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_MustChangeRange">MustChangeRange</a> is true and ENABLE_UNITY_COLLECTIONS_CHECKS is defined. Call <a class="xref" href="PWS.DungeonBlueprint.Util.RandomPicker.html#PWS_DungeonBlueprint_Util_RandomPicker_ChangeRange_System_Int32_Unity_Mathematics_Random__">ChangeRange(int, ref Random)</a> before using this property.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="PWS_DungeonBlueprint_Util_RandomPicker_ToString_" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.ToString*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Util_RandomPicker_ToString" data-uid="PWS.DungeonBlueprint.Util.RandomPicker.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Turns the RandomPicker into a human-readable string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Human-readable version of the RandomPicker.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Util/RandomPicker.cs/#L24" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

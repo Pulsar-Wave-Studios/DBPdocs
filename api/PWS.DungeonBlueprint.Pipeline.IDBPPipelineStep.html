@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IDBPPipelineStep | Dungeon Blueprint - 3D Dungeon Generator </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IDBPPipelineStep | Dungeon Blueprint - 3D Dungeon Generator ">
+      
+      <meta name="description" content="Interface defining a step of a run of . All steps the pipeline runs must implement this interface.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/new/main/apiSpec/new?filename=PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep.md&amp;value=---%0Auid%3A%20PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Dungeon Blueprint">
+            Dungeon Blueprint
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep">
+
+
+
+  <h1 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep" class="text-break">
+Interface IDBPPipelineStep  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PWS.html">PWS</a>.<a class="xref" href="PWS.DungeonBlueprint.html">DungeonBlueprint</a>.<a class="xref" href="PWS.DungeonBlueprint.Pipeline.html">Pipeline</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Interface defining a step of a run of <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html">DBPPipeline</a>.
+All steps the pipeline runs must implement this interface.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDBPPipelineStep</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Implement this interface to create a custom pipeline step and register it with the pipeline using <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipeline.html#PWS_DungeonBlueprint_Pipeline_DBPPipeline_RegisterStep_PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_">RegisterStep(IDBPPipelineStep)</a>.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsCompleted_" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.IsCompleted*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsCompleted" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.IsCompleted">
+  IsCompleted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this step has been completed.<br>
+Typically initialized to false, set to true when <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a> is called and set back to false when <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Reset">Reset()</a> is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsCompleted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsCompleted_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is used to check whether the next action to take is completing the step or continue to the next step of the pipeline. You have control over setting this so you can delay completion.
+The pipeline will not continue to the next step until this is set to true.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsCurrentJobCompleted_" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.IsCurrentJobCompleted*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsCurrentJobCompleted" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.IsCurrentJobCompleted">
+  IsCurrentJobCompleted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the async operation inside this step is completed.<br>
+This is typically connected to <span class="xref">Unity.Jobs.JobHandle.IsCompleted</span> using the job handle created during scheduling of the step, but it can represent the completion state of any asynchronous operation you are running.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsCurrentJobCompleted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsCurrentJobCompleted_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsScheduled">IsScheduled</a> and this return true, the pipeline will call <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a> on the step in its tick.<br>
+This allows the pipeline to finish the step before it has run the configured maximum number of ticks for this stage.<br>
+Once the maximum number of ticks has been reached, the pipeline will call <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a> even if this property is false.<br>
+If your step runs synchronously, you probably want this to always return true.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsScheduled_" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.IsScheduled*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsScheduled" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.IsScheduled">
+  IsScheduled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this step has been scheduled.<br>
+Typically initialized to false, set to true when <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Schedule_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Schedule(ref PipelineData, ref PipelineState)</a> is called and set back to false when <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Reset">Reset()</a> is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsScheduled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsScheduled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is used to check whether the next action to take on this step is scheduling or completing. You have control over setting this so you can delay scheduling.
+The step will not complete until this is set to true. This also means that resources you may have allocated in a call to <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Schedule_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Schedule(ref PipelineData, ref PipelineState)</a> and want to free in <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a>
+will only actually be freed if this returns true.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Order_" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Order*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Order" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Order">
+  Order
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ordering of this pipeline step. This determines the order of the steps within the same stage.<br>
+Lower order number comes first. If two steps have the same order number, whichever is added to the pipeline first will be executed first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">uint Order { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Order_examples">Examples</h4>
+  <p>If you have 2 custom pipeline steps with the stage <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Topology">Topology</a>, one with order 2 and one with order 11,
+the pipeline stage topology will have the steps ordered as 1. built-in <span class="xref">PWS.DungeonBlueprint.Topology.TopologyStep</span>, 2. custom step with order 2, 3. custom step with order 11.</p>
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Order_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>All built-in steps have order number 0 and are added to the pipeline immediately on object creation.<br>
+Since this is an uint, you can not have a custom pipeline step with an order number below 0, so you can not have a pipeline step execute before the built-in step of a stage.<br>
+If you want a custom pipeline step to be executed right before a built-in step, insert it to the prior stage with a high order number (possibly <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32.maxvalue">MaxValue</a>)</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Stage_" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Stage*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Stage" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Stage">
+  Stage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stage of this pipeline step. This determines when the pipeline executes this step.<br>
+Order is the same as in <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html">DBPPipelineStage</a>.<br>
+<a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_None">None</a> and <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Finished">Finished</a> are not valid stages for pipeline steps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DBPPipelineStage Stage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html">DBPPipelineStage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Stage_examples">Examples</h4>
+  <p>A custom pipeline step with the stage <a class="xref" href="PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html#PWS_DungeonBlueprint_Pipeline_DBPPipelineStage_Topology">Topology</a> will execute after the built-in <span class="xref">PWS.DungeonBlueprint.Topology.TopologyStep</span> and will therefore have access to the
+<a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html">TopologyGraph</a> in <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Schedule_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Schedule(ref PipelineData, ref PipelineState)</a> and <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a>.<br>
+While the <a class="xref" href="PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.html">ResolvedMissionGraph</a> will also be available, you should likely not modify it, since changes will not be carried over into the <a class="xref" href="PWS.DungeonBlueprint.Topology.TopologyGraph.html">TopologyGraph</a> at this point.</p>
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Stage_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A custom pipeline step is always executed after the built-in step that corresponds to the pipeline stage.<br>
+Since the built-in steps build the graph data structures of the pipeline, the stage of a custom pipeline step determine which data structures it will have access to.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Complete*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Complete(PWS.DungeonBlueprint.Pipeline.PipelineData@,PWS.DungeonBlueprint.Pipeline.PipelineState@)">
+  Complete(ref PipelineData, ref PipelineState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes the work for this step.<br>
+If the step runs asynchronously, this should block until it is completed.
+If the step runs synchronously, this should do the bulk of the work.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Complete(ref PipelineData data, ref PipelineState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="PWS.DungeonBlueprint.Pipeline.PipelineData.html">PipelineData</a></dt>
+    <dd><p>Graph data structures of the pipeline containing the results of the pipeline stages. You have read and write access.</p>
+</dd>
+    <dt><code>state</code> <a class="xref" href="PWS.DungeonBlueprint.Pipeline.PipelineState.html">PipelineState</a></dt>
+    <dd><p>Transient state of the pipeline run. You have read and write access.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the step was successful.<br>
+If this is true, the pipeline will continue to the next step.<br>
+If this is false, the pipeline will stop running.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the step was fully completed, this should typically make <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsCompleted">IsCompleted</a> return true.</p>
+</div>
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Reset_" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Reset*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Reset" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset the pipeline step.<br>
+This should reset all state of the pipeline step and return it to a state that allows scheduling the step again, with different data, even if it was completed previously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Schedule_" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Schedule*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Schedule_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__" data-uid="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.Schedule(PWS.DungeonBlueprint.Pipeline.PipelineData@,PWS.DungeonBlueprint.Pipeline.PipelineState@)">
+  Schedule(ref PipelineData, ref PipelineState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedule the work for this step.<br>
+If the step runs asynchronously, this should do everything needed to start the asynchronous work.
+If the step runs synchronously, you may do any preparation you need here, but do the bulk of the work in <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Schedule(ref PipelineData data, ref PipelineState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="PWS.DungeonBlueprint.Pipeline.PipelineData.html">PipelineData</a></dt>
+    <dd><p>Graph data structures of the pipeline containing the results of the pipeline stages. You have read and write access.</p>
+</dd>
+    <dt><code>state</code> <a class="xref" href="PWS.DungeonBlueprint.Pipeline.PipelineState.html">PipelineState</a></dt>
+    <dd><p>Transient state of the pipeline run. You have read and write access.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Schedule_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When a step is scheduled, it is guaranteed that <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a> will be called. However, the pipeline will check <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsScheduled">IsScheduled</a> to see if a step was scheduled,
+and that property is in your control. This means that if you need <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_Complete_PWS_DungeonBlueprint_Pipeline_PipelineData__PWS_DungeonBlueprint_Pipeline_PipelineState__">Complete(ref PipelineData, ref PipelineState)</a> to be called (for example if you allocated native memory and need to free it), you must
+make <a class="xref" href="PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html#PWS_DungeonBlueprint_Pipeline_IDBPPipelineStep_IsScheduled">IsScheduled</a> return true.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Pipeline/IDBPPipelineStep.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

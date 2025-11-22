@@ -1,0 +1,993 @@
+{
+  "source_base_path": "/home/runner/work/DungeonBlueprint/DungeonBlueprint/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.yml\" sourcestartlinenumber=\"1\">Read-only wrapper around a construction graph instance.<br>\nThis is only a view over the existing memory and not a deep copy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Construction.ConstructionGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Construction.ConstructionGraph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Construction.ConstructionGraph",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Construction.ConstructionGraph.yml\" sourcestartlinenumber=\"1\">Main data structure for the <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.Construction\" data-throw-if-not-resolved=\"false\"></xref> phase of the transformation pipeline.<br>\nThis is the first phase where each room and door have their position assigned.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Construction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Construction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Construction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Core.DBPConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Core.DBPConstants.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Core.DBPConstants",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Core.DBPConstants.yml\" sourcestartlinenumber=\"1\">A few central constants used across Dungeon Blueprint.\nNot all constants in the project are collected here, only those that are relevant across large parts of the project and possibly for user code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Core.DBPPipelineSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Core.DBPPipelineSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Core.DBPPipelineSettings",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Core.DBPPipelineSettings.yml\" sourcestartlinenumber=\"1\">A settings object for configuring <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipeline\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Core.DBPPipelineSettingsSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Core.DBPPipelineSettingsSO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Core.DBPPipelineSettingsSO",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Core.DBPPipelineSettingsSO.yml\" sourcestartlinenumber=\"1\">A scriptable object wrapper for <xref href=\"PWS.DungeonBlueprint.Core.DBPPipelineSettings\" data-throw-if-not-resolved=\"false\"></xref>.<br>\nUseful for storing your settings as assets.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Core.DBPRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Core.DBPRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Core.DBPRegistry",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Core.DBPRegistry.yml\" sourcestartlinenumber=\"1\">A central data registry. Dungeon Blueprint's data is registered here to be used across its algorithms.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Core.DBPWorldSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Core.DBPWorldSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Core.DBPWorldSettings",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Core.DBPWorldSettings.yml\" sourcestartlinenumber=\"1\">A settings object for configuring <xref href=\"PWS.DungeonBlueprint.World.DBPWorld\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Core.DBPWorldSettingsSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Core.DBPWorldSettingsSO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Core.DBPWorldSettingsSO",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Core.DBPWorldSettingsSO.yml\" sourcestartlinenumber=\"1\">A scriptable object wrapper for <xref href=\"PWS.DungeonBlueprint.Core.DBPWorldSettings\" data-throw-if-not-resolved=\"false\"></xref>.<br>\nUseful for storing your settings as assets.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Core",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.DoorDataCollectionSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.DoorDataCollectionSO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.DoorDataCollectionSO",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.DoorDataCollectionSO.yml\" sourcestartlinenumber=\"1\">Collections of <xref href=\"PWS.DungeonBlueprint.Data.DoorDataSO\" data-throw-if-not-resolved=\"false\"></xref> which can be assigned to nodes in the <xref href=\"PWS.DungeonBlueprint.Mission.MissionGraph\" data-throw-if-not-resolved=\"false\"></xref>.\nThe generation algorithm will then pick a door data of the assigned collection when placing the door.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.DoorDataSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.DoorDataSO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.DoorDataSO",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.DoorDataSO.yml\" sourcestartlinenumber=\"1\">Data about a door that can be placed in a dungeon. Door data can be collected in a <xref href=\"PWS.DungeonBlueprint.Data.DoorDataCollectionSO\" data-throw-if-not-resolved=\"false\"></xref> and then assigned to a node in the <xref href=\"PWS.DungeonBlueprint.Mission.MissionGraph\" data-throw-if-not-resolved=\"false\"></xref>.\nOne of the doors in the assigned collection will then be used for the node during generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.RoomDataCollectionSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.RoomDataCollectionSO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.RoomDataCollectionSO",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.RoomDataCollectionSO.yml\" sourcestartlinenumber=\"1\">Collections of <xref href=\"PWS.DungeonBlueprint.Data.RoomDataSO\" data-throw-if-not-resolved=\"false\"></xref> which can be assigned to nodes in the <xref href=\"PWS.DungeonBlueprint.Mission.MissionGraph\" data-throw-if-not-resolved=\"false\"></xref>.\nThe generation algorithm will then pick a room data of the assigned collection when placing the room.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.RoomDataSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.RoomDataSO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.RoomDataSO",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.RoomDataSO.yml\" sourcestartlinenumber=\"1\">Data about a room that can be placed in a dungeon. Room data can be collected in a <xref href=\"PWS.DungeonBlueprint.Data.RoomDataCollectionSO\" data-throw-if-not-resolved=\"false\"></xref> and then assigned to a node in the <xref href=\"PWS.DungeonBlueprint.Mission.MissionGraph\" data-throw-if-not-resolved=\"false\"></xref>.\nOne of the rooms in the assigned collection will then be used for the node during generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.RoomDoorConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.RoomDoorConnection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.RoomDoorConnection",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.RoomDoorConnection.yml\" sourcestartlinenumber=\"1\">Data about how a room can connect to doors (and thus other rooms).\nWhen defining your room data, you should add one room door connection for every spot where there is space for a door.<br>\nMetaphorically, you can consider these to be doorways.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedDoorData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedDoorData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.UnmanagedDoorData",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.UnmanagedDoorData.yml\" sourcestartlinenumber=\"1\">Unmanaged counter-part of <xref href=\"PWS.DungeonBlueprint.Data.DoorDataSO\" data-throw-if-not-resolved=\"false\"></xref>.\nUsed for crossing the door data over into Burst compatible code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedDoorDataCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedDoorDataCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.UnmanagedDoorDataCollection",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.UnmanagedDoorDataCollection.yml\" sourcestartlinenumber=\"1\">The unmanaged counter-part of <xref href=\"PWS.DungeonBlueprint.Data.DoorDataCollectionSO\" data-throw-if-not-resolved=\"false\"></xref>.\nThis is used for crossing the door data collection over into Burst compatible code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedRoomData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedRoomData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.UnmanagedRoomData",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.UnmanagedRoomData.yml\" sourcestartlinenumber=\"1\">Unmanaged counter-part of <xref href=\"PWS.DungeonBlueprint.Data.RoomDataSO\" data-throw-if-not-resolved=\"false\"></xref>.\nUsed for crossing the room data over into Burst compatible code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedRoomDataCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedRoomDataCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.UnmanagedRoomDataCollection",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.UnmanagedRoomDataCollection.yml\" sourcestartlinenumber=\"1\">Unmanaged counter-part of <xref href=\"PWS.DungeonBlueprint.Data.RoomDataCollectionSO\" data-throw-if-not-resolved=\"false\"></xref>.\nUsed for crossing the room data collection over into Burst compatible code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedRoomDoorConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.UnmanagedRoomDoorConnection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data.UnmanagedRoomDoorConnection",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Data.UnmanagedRoomDoorConnection.yml\" sourcestartlinenumber=\"1\">Unmanaged counter-part of <xref href=\"PWS.DungeonBlueprint.Data.RoomDoorConnection\" data-throw-if-not-resolved=\"false\"></xref>.\nUsed for crossing the room door connections over into Burst compatible code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridDirection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid.GridDirection",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridDirection.yml\" sourcestartlinenumber=\"1\">Represents a direction in the dungeon grid.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridDirectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridDirectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid.GridDirectionExtensions",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridDirectionExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for <xref href=\"PWS.DungeonBlueprint.Grid.GridDirection\" data-throw-if-not-resolved=\"false\"></xref> enum.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridPath.ReadOnly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridPath.ReadOnly.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid.GridPath.ReadOnly",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridPath.ReadOnly.yml\" sourcestartlinenumber=\"1\">Read-only wrapper around a path instance.<br>\nThis is only a view over the existing memory and not a deep copy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridPath.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid.GridPath",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridPath.yml\" sourcestartlinenumber=\"1\">Represents a path from one node to another node through the graph.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridPosition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid.GridPosition",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridPosition.yml\" sourcestartlinenumber=\"1\">Represents a position in the dungeon grid. Sometimes also used to represent a position offset.<br>\nSimilar to <xref href=\"UnityEngine.Vector3Int\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridRotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridRotation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid.GridRotation",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridRotation.yml\" sourcestartlinenumber=\"1\">Represents a rotation in the dungeon grid.<br>\nRotations are always around the y-axis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridRotationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridRotationExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid.GridRotationExtensions",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridRotationExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for <xref href=\"PWS.DungeonBlueprint.Grid.GridRotation\" data-throw-if-not-resolved=\"false\"></xref> enum.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridSize.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid.GridSize",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridSize.yml\" sourcestartlinenumber=\"1\">Represents a size in the dungeon. The unit depends on the context and is not necessarily number of tiles in the dungeon grid.<br>\nSimilar to <xref href=\"PWS.DungeonBlueprint.Grid.GridPosition\" data-throw-if-not-resolved=\"false\"></xref>. The main difference is the semantics they are used with.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Grid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Grid",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.yml\" sourcestartlinenumber=\"1\">Read-only wrapper around a mission graph instance.<br>\nThis is only a view over the existing memory and not a deep copy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.MissionGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.MissionGraph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.MissionGraph",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.MissionGraph.yml\" sourcestartlinenumber=\"1\">Main data structure for Mission phase of the transformation pipeline.<br>\nThis is effectively the input into the pipeline, which is built by the user, either through editor tooling or by code.<br>\nThis data structure bundles the main graph along with all its subgraphs each as <xref href=\"PWS.DungeonBlueprint.Mission.PartialMissionGraph\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.MissionGraphAsset",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.yml\" sourcestartlinenumber=\"1\">Represents a serialized Mission asset.\nAllows serializing an instance of <xref href=\"PWS.DungeonBlueprint.Mission.MissionGraph\" data-throw-if-not-resolved=\"false\"></xref> to a ScriptableObject asset and deserializing back to a functionally equivalent <xref href=\"PWS.DungeonBlueprint.Mission.MissionGraph\" data-throw-if-not-resolved=\"false\"></xref> instance.\nSerialization is editor-only, while deserialization is available both in editor and runtime.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.MissionGroupMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.MissionGroupMetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.MissionGroupMetaData",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.MissionGroupMetaData.yml\" sourcestartlinenumber=\"1\">Container for packing multiple data points about mission group nodes into a single 32-bit int.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.MissionNodeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.MissionNodeType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.MissionNodeType",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.MissionNodeType.yml\" sourcestartlinenumber=\"1\">Type of nodes in a mission. Every node has exactly one type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.MissionPortalType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.MissionPortalType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.MissionPortalType",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.MissionPortalType.yml\" sourcestartlinenumber=\"1\">Type of portals in a mission. Every portal has exactly one type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.yml\" sourcestartlinenumber=\"1\">Read-only wrapper around a partial mission graph instance.<br>\nThis is only a view over the existing memory and not a deep copy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.PartialMissionGraph",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.yml\" sourcestartlinenumber=\"1\">Part of a mission graph. This is where the actual nodes of the mission are.<br>\nEvery mission graph has at least one partial mission graph. Additionally, it has a partial mission graph for every\ngroup node in the main partial graph.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.yml\" sourcestartlinenumber=\"1\">Read-only wrapper around a resolved mission graph instance.<br>\nThis is only a view over the existing memory and not a deep copy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission.ResolvedMissionGraph",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.yml\" sourcestartlinenumber=\"1\">Main data structure for the <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.ResolveMission\" data-throw-if-not-resolved=\"false\"></xref> phase of the transformation pipeline.<br>\nThis is the first phase where the group nodes of the mission graph have been fully inserted or omitted.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Mission.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Mission.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Mission",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Pipeline.DBPPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Pipeline.DBPPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Pipeline.DBPPipeline",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Pipeline.DBPPipeline.yml\" sourcestartlinenumber=\"1\">Dungeon generation pipeline. This is one of the main components of Dungeon Blueprint.<br>\nPipeline takes a <xref href=\"PWS.DungeonBlueprint.Mission.MissionGraph\" data-throw-if-not-resolved=\"false\"></xref> and a few additional settings and runs through various built-in transformation steps resulting in a <xref href=\"PWS.DungeonBlueprint.Runtime.RuntimeGraph\" data-throw-if-not-resolved=\"false\"></xref>, which can then be spawned.<br>\nAll work done in the pipeline is independent of the Unity scene, and you can run the entire pipeline without affecting the scene.<br>\nThe interaction with the scene is handled by <xref href=\"PWS.DungeonBlueprint.World.DBPWorld\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Pipeline.DBPPipelineStage",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.yml\" sourcestartlinenumber=\"1\">Stages of the pipeline. The pipeline will go through each stage during a run in the order defined in the enum.<br>\nA stage may have multiple steps registered in the pipeline.<br>\nThere is a built-in step for each stage which builds the graph data structures. Therefore, the stage of the pipeline implies which data structures already exist.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Pipeline.EntryRoomInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Pipeline.EntryRoomInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Pipeline.EntryRoomInfo",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Pipeline.EntryRoomInfo.yml\" sourcestartlinenumber=\"1\">Container for all information the <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipeline\" data-throw-if-not-resolved=\"false\"></xref> needs regarding the entry room.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Pipeline.IDBPPipelineStep.yml\" sourcestartlinenumber=\"1\">Interface defining a step of a run of <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipeline\" data-throw-if-not-resolved=\"false\"></xref>.\nAll steps the pipeline runs must implement this interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Pipeline.PipelineData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Pipeline.PipelineData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Pipeline.PipelineData",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Pipeline.PipelineData.yml\" sourcestartlinenumber=\"1\">Container for each graph structure used and created during in a <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipeline\" data-throw-if-not-resolved=\"false\"></xref> run.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Pipeline.PipelineState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Pipeline.PipelineState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Pipeline.PipelineState",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Pipeline.PipelineState.yml\" sourcestartlinenumber=\"1\">Container for various state used in a <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipeline\" data-throw-if-not-resolved=\"false\"></xref> run.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Pipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Pipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Pipeline",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.yml\" sourcestartlinenumber=\"1\">Represents a variable number of serialized runtime graphs all generated from the same mission graph asset.<br>\nSerialization is editor-only, while deserialization is available both in editor and runtime.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.yml\" sourcestartlinenumber=\"1\">Read-only wrapper around a runtime graph instance.<br>\nThis is only a view over the existing memory and not a deep copy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Runtime.RuntimeGraph",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.yml\" sourcestartlinenumber=\"1\">Main data structure for the <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.Runtime\" data-throw-if-not-resolved=\"false\"></xref> phase of the transformation pipeline.<br>\nThis is effectively the output of the pipeline, which the final dungeon can be constructed from.<br>\nThis instance can also be serialized into an asset.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Runtime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Runtime.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Runtime",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.yml\" sourcestartlinenumber=\"1\">Read-only wrapper around a topology graph instance.<br>\nThis is only a view over the existing memory and not a deep copy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Topology.TopologyGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Topology.TopologyGraph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Topology.TopologyGraph",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Topology.TopologyGraph.yml\" sourcestartlinenumber=\"1\">Main data structure for the <xref href=\"PWS.DungeonBlueprint.Pipeline.DBPPipelineStage.Topology\" data-throw-if-not-resolved=\"false\"></xref> phase of the transformation pipeline.<br>\nThis is the first phase where each node represents a room in the final dungeon and each edge represents a door in the final dungeon.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Topology.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Topology.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Topology",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Util.BucketPriorityQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Util.BucketPriorityQueue-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Util.BucketPriorityQueue<TValue>",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Util.BucketPriorityQueue-1.yml\" sourcestartlinenumber=\"1\">Bucket priority queue for queueing elements with a known number of discrete priorities. You must pass the maximum number of priorities into the constructor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Util.BurstDiscard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Util.BurstDiscard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Util.BurstDiscard",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Util.BurstDiscard.yml\" sourcestartlinenumber=\"1\">Collection of helper functions which are attributed with <xref href=\"Unity.Burst.BurstDiscardAttribute\" data-throw-if-not-resolved=\"false\"></xref>,\nmeaning it will not be executed in code compiled by the Burst compiler.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Util.MiscExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Util.MiscExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Util.MiscExtensions",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Util.MiscExtensions.yml\" sourcestartlinenumber=\"1\">Some helper functions to extend the functionality of various types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Util.RandomPicker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Util.RandomPicker.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Util.RandomPicker",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Util.RandomPicker.yml\" sourcestartlinenumber=\"1\">Random number picker for picking numbers in an interval [0, max] where max is passed to the constructor.\nYou may change the maximum number after construction with <xref href=\"PWS.DungeonBlueprint.Util.RandomPicker.ChangeRange(System.Int32%2cUnity.Mathematics.Random%40)\" data-throw-if-not-resolved=\"false\"></xref>.<br>\nNumbers are guaranteed to only be picked once, until <xref href=\"PWS.DungeonBlueprint.Util.RandomPicker.ResetSelection\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"PWS.DungeonBlueprint.Util.RandomPicker.ChangeRange(System.Int32%2cUnity.Mathematics.Random%40)\" data-throw-if-not-resolved=\"false\"></xref> is called.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.Util.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.Util",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.World.CanMoveCheckCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.World.CanMoveCheckCallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.World.CanMoveCheckCallback",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.World.CanMoveCheckCallback.yml\" sourcestartlinenumber=\"1\">Delegate for checking traversability from one tile to another tile during pathfinding.<br></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.World.DBPWorld.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.World.DBPWorld.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.World.DBPWorld",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.World.DBPWorld.yml\" sourcestartlinenumber=\"1\">Runtime interface of a generated dungeon. This is one of the main components of Dungeon Blueprint.\nWorld takes a previously generated <xref href=\"PWS.DungeonBlueprint.World.DBPWorld.RuntimeGraph\" data-throw-if-not-resolved=\"false\"></xref> and spawns it into the Unity scene.\nAfter spawning, the world offers runtime feature like querying and events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.World.DoorPassHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.World.DoorPassHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.World.DoorPassHandler",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.World.DoorPassHandler.yml\" sourcestartlinenumber=\"1\">Delegate for subscribing to door pass events.<br></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.World.RoomEnterEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.World.RoomEnterEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.World.RoomEnterEventHandler",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.World.RoomEnterEventHandler.yml\" sourcestartlinenumber=\"1\">Delegate for subscribing to room enter events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.World.RoomExitEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.World.RoomExitEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.World.RoomExitEventHandler",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.World.RoomExitEventHandler.yml\" sourcestartlinenumber=\"1\">Delegate for subscribing to room exit events.<br></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.World.RoomStayEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.World.RoomStayEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.World.RoomStayEventHandler",
+      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.World.RoomStayEventHandler.yml\" sourcestartlinenumber=\"1\">Delegate for subscribing to room stay events.<br></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PWS.DungeonBlueprint.World.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PWS.DungeonBlueprint.World.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PWS.DungeonBlueprint.World",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
