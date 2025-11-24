@@ -159,7 +159,7 @@ public struct UnmanagedRoomData : IDisposable</code></pre>
 
   <div class="markdown level1 summary"><p>All door connections of this room, cached for all possible rotations and grouped by the direction the connection points to for fast compatibility checking.
 To access the door connections pointing in a specific direction on a room with a specific rotation,
-use <code>DoorConnectionsGrouped[(int)rotation * GridDirectionExtensions.NrHorizontalDirections + (int)direction]</code>.
+use <code>DoorConnectionsGrouped[(int)rotation * GridDirectionExtensions.NrHorizontalDirections + (int)direction - (int)GridDirection.HorizontalForward]</code>.
 The inner list is then just a simple list containing the door connections.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

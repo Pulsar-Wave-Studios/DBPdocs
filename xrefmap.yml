@@ -1850,6 +1850,41 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Grid.GridSize.Depth
   nameWithType: GridSize.Depth
+- uid: PWS.DungeonBlueprint.Grid.GridSize.Equals(PWS.DungeonBlueprint.Grid.GridSize)
+  name: Equals(GridSize)
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_Equals_PWS_DungeonBlueprint_Grid_GridSize_
+  commentId: M:PWS.DungeonBlueprint.Grid.GridSize.Equals(PWS.DungeonBlueprint.Grid.GridSize)
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.Equals(PWS.DungeonBlueprint.Grid.GridSize)
+  nameWithType: GridSize.Equals(GridSize)
+- uid: PWS.DungeonBlueprint.Grid.GridSize.Equals(System.Object)
+  name: Equals(object)
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_Equals_System_Object_
+  commentId: M:PWS.DungeonBlueprint.Grid.GridSize.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.Equals(object)
+  fullName.vb: PWS.DungeonBlueprint.Grid.GridSize.Equals(Object)
+  nameWithType: GridSize.Equals(object)
+  nameWithType.vb: GridSize.Equals(Object)
+- uid: PWS.DungeonBlueprint.Grid.GridSize.Equals*
+  name: Equals
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_Equals_
+  commentId: Overload:PWS.DungeonBlueprint.Grid.GridSize.Equals
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.Equals
+  nameWithType: GridSize.Equals
+- uid: PWS.DungeonBlueprint.Grid.GridSize.GetHashCode
+  name: GetHashCode()
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_GetHashCode
+  commentId: M:PWS.DungeonBlueprint.Grid.GridSize.GetHashCode
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.GetHashCode()
+  nameWithType: GridSize.GetHashCode()
+- uid: PWS.DungeonBlueprint.Grid.GridSize.GetHashCode*
+  name: GetHashCode
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_GetHashCode_
+  commentId: Overload:PWS.DungeonBlueprint.Grid.GridSize.GetHashCode
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.GetHashCode
+  nameWithType: GridSize.GetHashCode
 - uid: PWS.DungeonBlueprint.Grid.GridSize.Height
   name: Height
   href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_Height
@@ -1914,6 +1949,44 @@ references:
   commentId: F:PWS.DungeonBlueprint.Grid.GridSize.Zero
   fullName: PWS.DungeonBlueprint.Grid.GridSize.Zero
   nameWithType: GridSize.Zero
+- uid: PWS.DungeonBlueprint.Grid.GridSize.op_Equality(PWS.DungeonBlueprint.Grid.GridSize,PWS.DungeonBlueprint.Grid.GridSize)
+  name: operator ==(GridSize, GridSize)
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_op_Equality_PWS_DungeonBlueprint_Grid_GridSize_PWS_DungeonBlueprint_Grid_GridSize_
+  commentId: M:PWS.DungeonBlueprint.Grid.GridSize.op_Equality(PWS.DungeonBlueprint.Grid.GridSize,PWS.DungeonBlueprint.Grid.GridSize)
+  name.vb: =(GridSize, GridSize)
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.operator ==(PWS.DungeonBlueprint.Grid.GridSize, PWS.DungeonBlueprint.Grid.GridSize)
+  fullName.vb: PWS.DungeonBlueprint.Grid.GridSize.=(PWS.DungeonBlueprint.Grid.GridSize, PWS.DungeonBlueprint.Grid.GridSize)
+  nameWithType: GridSize.operator ==(GridSize, GridSize)
+  nameWithType.vb: GridSize.=(GridSize, GridSize)
+- uid: PWS.DungeonBlueprint.Grid.GridSize.op_Equality*
+  name: operator ==
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_op_Equality_
+  commentId: Overload:PWS.DungeonBlueprint.Grid.GridSize.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.operator ==
+  fullName.vb: PWS.DungeonBlueprint.Grid.GridSize.=
+  nameWithType: GridSize.operator ==
+  nameWithType.vb: GridSize.=
+- uid: PWS.DungeonBlueprint.Grid.GridSize.op_Inequality(PWS.DungeonBlueprint.Grid.GridSize,PWS.DungeonBlueprint.Grid.GridSize)
+  name: operator !=(GridSize, GridSize)
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_op_Inequality_PWS_DungeonBlueprint_Grid_GridSize_PWS_DungeonBlueprint_Grid_GridSize_
+  commentId: M:PWS.DungeonBlueprint.Grid.GridSize.op_Inequality(PWS.DungeonBlueprint.Grid.GridSize,PWS.DungeonBlueprint.Grid.GridSize)
+  name.vb: <>(GridSize, GridSize)
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.operator !=(PWS.DungeonBlueprint.Grid.GridSize, PWS.DungeonBlueprint.Grid.GridSize)
+  fullName.vb: PWS.DungeonBlueprint.Grid.GridSize.<>(PWS.DungeonBlueprint.Grid.GridSize, PWS.DungeonBlueprint.Grid.GridSize)
+  nameWithType: GridSize.operator !=(GridSize, GridSize)
+  nameWithType.vb: GridSize.<>(GridSize, GridSize)
+- uid: PWS.DungeonBlueprint.Grid.GridSize.op_Inequality*
+  name: operator !=
+  href: api/PWS.DungeonBlueprint.Grid.GridSize.html#PWS_DungeonBlueprint_Grid_GridSize_op_Inequality_
+  commentId: Overload:PWS.DungeonBlueprint.Grid.GridSize.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: PWS.DungeonBlueprint.Grid.GridSize.operator !=
+  fullName.vb: PWS.DungeonBlueprint.Grid.GridSize.<>
+  nameWithType: GridSize.operator !=
+  nameWithType.vb: GridSize.<>
 - uid: PWS.DungeonBlueprint.Mission
   name: PWS.DungeonBlueprint.Mission
   href: api/PWS.DungeonBlueprint.Mission.html
