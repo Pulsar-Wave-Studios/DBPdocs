@@ -91,6 +91,19 @@ references:
   commentId: F:PWS.DungeonBlueprint.Construction.ConstructionGraph.EdgeNames
   fullName: PWS.DungeonBlueprint.Construction.ConstructionGraph.EdgeNames
   nameWithType: ConstructionGraph.EdgeNames
+- uid: PWS.DungeonBlueprint.Construction.ConstructionGraph.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Construction.ConstructionGraph.html#PWS_DungeonBlueprint_Construction_ConstructionGraph_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Construction.ConstructionGraph.IsCreated
+  fullName: PWS.DungeonBlueprint.Construction.ConstructionGraph.IsCreated
+  nameWithType: ConstructionGraph.IsCreated
+- uid: PWS.DungeonBlueprint.Construction.ConstructionGraph.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Construction.ConstructionGraph.html#PWS_DungeonBlueprint_Construction_ConstructionGraph_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Construction.ConstructionGraph.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Construction.ConstructionGraph.IsCreated
+  nameWithType: ConstructionGraph.IsCreated
 - uid: PWS.DungeonBlueprint.Construction.ConstructionGraph.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Construction.ConstructionGraph.html#PWS_DungeonBlueprint_Construction_ConstructionGraph_NodeAdjacencies
@@ -2025,6 +2038,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Mission.MissionGraph.Dispose
   nameWithType: MissionGraph.Dispose
+- uid: PWS.DungeonBlueprint.Mission.MissionGraph.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraph.html#PWS_DungeonBlueprint_Mission_MissionGraph_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Mission.MissionGraph.IsCreated
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraph.IsCreated
+  nameWithType: MissionGraph.IsCreated
+- uid: PWS.DungeonBlueprint.Mission.MissionGraph.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraph.html#PWS_DungeonBlueprint_Mission_MissionGraph_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.MissionGraph.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraph.IsCreated
+  nameWithType: MissionGraph.IsCreated
 - uid: PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly
   name: MissionGraph.ReadOnly
   href: api/PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.html
@@ -2286,6 +2312,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Mission.PartialMissionGraph.Dispose
   nameWithType: PartialMissionGraph.Dispose
+- uid: PWS.DungeonBlueprint.Mission.PartialMissionGraph.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.html#PWS_DungeonBlueprint_Mission_PartialMissionGraph_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Mission.PartialMissionGraph.IsCreated
+  fullName: PWS.DungeonBlueprint.Mission.PartialMissionGraph.IsCreated
+  nameWithType: PartialMissionGraph.IsCreated
+- uid: PWS.DungeonBlueprint.Mission.PartialMissionGraph.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.html#PWS_DungeonBlueprint_Mission_PartialMissionGraph_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.PartialMissionGraph.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.PartialMissionGraph.IsCreated
+  nameWithType: PartialMissionGraph.IsCreated
 - uid: PWS.DungeonBlueprint.Mission.PartialMissionGraph.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.html#PWS_DungeonBlueprint_Mission_PartialMissionGraph_NodeAdjacencies
@@ -3358,6 +3397,19 @@ references:
   commentId: F:PWS.DungeonBlueprint.Runtime.RuntimeGraph.EdgeNames
   fullName: PWS.DungeonBlueprint.Runtime.RuntimeGraph.EdgeNames
   nameWithType: RuntimeGraph.EdgeNames
+- uid: PWS.DungeonBlueprint.Runtime.RuntimeGraph.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Runtime.RuntimeGraph.IsCreated
+  fullName: PWS.DungeonBlueprint.Runtime.RuntimeGraph.IsCreated
+  nameWithType: RuntimeGraph.IsCreated
+- uid: PWS.DungeonBlueprint.Runtime.RuntimeGraph.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Runtime.RuntimeGraph.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Runtime.RuntimeGraph.IsCreated
+  nameWithType: RuntimeGraph.IsCreated
 - uid: PWS.DungeonBlueprint.Runtime.RuntimeGraph.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_NodeAdjacencies
@@ -3400,12 +3452,6 @@ references:
   commentId: F:PWS.DungeonBlueprint.Runtime.RuntimeGraph.NodeRotations
   fullName: PWS.DungeonBlueprint.Runtime.RuntimeGraph.NodeRotations
   nameWithType: RuntimeGraph.NodeRotations
-- uid: PWS.DungeonBlueprint.Runtime.RuntimeGraph.NodeToNodePaths
-  name: NodeToNodePaths
-  href: api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_NodeToNodePaths
-  commentId: F:PWS.DungeonBlueprint.Runtime.RuntimeGraph.NodeToNodePaths
-  fullName: PWS.DungeonBlueprint.Runtime.RuntimeGraph.NodeToNodePaths
-  nameWithType: RuntimeGraph.NodeToNodePaths
 - uid: PWS.DungeonBlueprint.Runtime.RuntimeGraph.NrAdjacenciesPerNode
   name: NrAdjacenciesPerNode
   href: api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_NrAdjacenciesPerNode
@@ -3531,6 +3577,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.EdgeNames
   nameWithType: RuntimeGraph.ReadOnly.EdgeNames
+- uid: PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_ReadOnly_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.IsCreated
+  fullName: PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.IsCreated
+  nameWithType: RuntimeGraph.ReadOnly.IsCreated
+- uid: PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_ReadOnly_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.IsCreated
+  nameWithType: RuntimeGraph.ReadOnly.IsCreated
 - uid: PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Runtime.RuntimeGraph.ReadOnly.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_ReadOnly_NodeAdjacencies
@@ -3707,6 +3766,19 @@ references:
   commentId: F:PWS.DungeonBlueprint.Topology.TopologyGraph.EdgeNames
   fullName: PWS.DungeonBlueprint.Topology.TopologyGraph.EdgeNames
   nameWithType: TopologyGraph.EdgeNames
+- uid: PWS.DungeonBlueprint.Topology.TopologyGraph.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Topology.TopologyGraph.IsCreated
+  fullName: PWS.DungeonBlueprint.Topology.TopologyGraph.IsCreated
+  nameWithType: TopologyGraph.IsCreated
+- uid: PWS.DungeonBlueprint.Topology.TopologyGraph.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Topology.TopologyGraph.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Topology.TopologyGraph.IsCreated
+  nameWithType: TopologyGraph.IsCreated
 - uid: PWS.DungeonBlueprint.Topology.TopologyGraph.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Topology.TopologyGraph.html#PWS_DungeonBlueprint_Topology_TopologyGraph_NodeAdjacencies

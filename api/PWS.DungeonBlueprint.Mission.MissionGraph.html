@@ -154,7 +154,7 @@ This data structure bundles the main graph along with all its subgraphs each as 
 
   <h3 id="PWS_DungeonBlueprint_Mission_MissionGraph_Root" data-uid="PWS.DungeonBlueprint.Mission.MissionGraph.Root">
   Root
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Main graph of this mission graph.<br>
@@ -186,7 +186,7 @@ A valid mission graph always has a valid root partial mission graph.</p>
 
   <h3 id="PWS_DungeonBlueprint_Mission_MissionGraph_Subgraphs" data-uid="PWS.DungeonBlueprint.Mission.MissionGraph.Subgraphs">
   Subgraphs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>All subgraphs used in the main graph.<br>
@@ -215,6 +215,48 @@ The key is the subgraph identifier in the group node in the main graph and also 
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="PWS_DungeonBlueprint_Mission_MissionGraph_IsCreated_" data-uid="PWS.DungeonBlueprint.Mission.MissionGraph.IsCreated*"></a>
+
+  <h3 id="PWS_DungeonBlueprint_Mission_MissionGraph_IsCreated" data-uid="PWS.DungeonBlueprint.Mission.MissionGraph.IsCreated">
+  IsCreated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether this instance currently holds the necessary memory to be valid.<br>
+This is a necessary condition for a valid instance, but not a sufficient one.<br>
+This means that if this is false, it's definitely not a valid instance to run logic on, but if
+this is true, that is not a guarantee that it is a valid instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsCreated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PWS_DungeonBlueprint_Mission_MissionGraph_IsCreated_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is identical to checking <a class="xref" href="PWS.DungeonBlueprint.Mission.PartialMissionGraph.html#PWS_DungeonBlueprint_Mission_PartialMissionGraph_IsCreated">IsCreated</a> on <a class="xref" href="PWS.DungeonBlueprint.Mission.MissionGraph.html#PWS_DungeonBlueprint_Mission_MissionGraph_Root">Root</a>. The member <a class="xref" href="PWS.DungeonBlueprint.Mission.MissionGraph.html#PWS_DungeonBlueprint_Mission_MissionGraph_Subgraphs">Subgraphs</a> is not checked, since mission graphs that have no subgraphs may not allocate it.</p>
+</div>
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -223,7 +265,7 @@ The key is the subgraph identifier in the group node in the main graph and also 
 
   <h3 id="PWS_DungeonBlueprint_Mission_MissionGraph_AsReadOnly" data-uid="PWS.DungeonBlueprint.Mission.MissionGraph.AsReadOnly">
   AsReadOnly()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new read-only wrapper and returns it.</p>
@@ -262,7 +304,7 @@ The key is the subgraph identifier in the group node in the main graph and also 
 
   <h3 id="PWS_DungeonBlueprint_Mission_MissionGraph_Dispose" data-uid="PWS.DungeonBlueprint.Mission.MissionGraph.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Mission/MissionGraph.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Frees native memory.
