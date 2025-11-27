@@ -169,7 +169,7 @@ public class BakedRuntimeGraphsAsset : ScriptableObject</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MissionGraphAsset Mission { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MissionGraphAsset Mission { get; }</code></pre>
   </div>
 
 
@@ -193,7 +193,7 @@ public class BakedRuntimeGraphsAsset : ScriptableObject</code></pre>
 
   <h3 id="PWS_DungeonBlueprint_Runtime_BakedRuntimeGraphsAsset_NrSerializedGraphs" data-uid="PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.NrSerializedGraphs">
   NrSerializedGraphs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Number of serialized runtime graphs in this asset.</p>
@@ -225,7 +225,7 @@ public class BakedRuntimeGraphsAsset : ScriptableObject</code></pre>
 
   <h3 id="PWS_DungeonBlueprint_Runtime_BakedRuntimeGraphsAsset_SeedList" data-uid="PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.SeedList">
   SeedList
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>List of all seeds of the serialized runtime graphs in this asset.<br>
@@ -266,7 +266,7 @@ C# allows casting this to <a class="xref" href="https://learn.microsoft.com/dotn
 
   <h3 id="PWS_DungeonBlueprint_Runtime_BakedRuntimeGraphsAsset_GetRandomRuntimeGraphAlloc_PWS_DungeonBlueprint_Core_DBPRegistry_PWS_DungeonBlueprint_Runtime_RuntimeGraph__" data-uid="PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.GetRandomRuntimeGraphAlloc(PWS.DungeonBlueprint.Core.DBPRegistry,PWS.DungeonBlueprint.Runtime.RuntimeGraph@)">
   GetRandomRuntimeGraphAlloc(DBPRegistry, out RuntimeGraph)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets any of the runtime graphs that are serialized in this asset.</p>
@@ -298,6 +298,12 @@ C# allows casting this to <a class="xref" href="https://learn.microsoft.com/dotn
   <div class="markdown level1 remarks"><p>This allocates native memory with <span class="xref">Unity.Collections.Allocator.Persistent</span>. You must call <a class="xref" href="PWS.DungeonBlueprint.Runtime.RuntimeGraph.html#PWS_DungeonBlueprint_Runtime_RuntimeGraph_Dispose">Dispose()</a> to free it.</p>
 </div>
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If no graphs are serialized in this asset.</p>
+</dd>
+  </dl>
 
 
 
@@ -305,7 +311,7 @@ C# allows casting this to <a class="xref" href="https://learn.microsoft.com/dotn
 
   <h3 id="PWS_DungeonBlueprint_Runtime_BakedRuntimeGraphsAsset_GetRuntimeGraphByIndexAlloc_System_Int32_PWS_DungeonBlueprint_Core_DBPRegistry_PWS_DungeonBlueprint_Runtime_RuntimeGraph__" data-uid="PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.GetRuntimeGraphByIndexAlloc(System.Int32,PWS.DungeonBlueprint.Core.DBPRegistry,PWS.DungeonBlueprint.Runtime.RuntimeGraph@)">
   GetRuntimeGraphByIndexAlloc(int, DBPRegistry, out RuntimeGraph)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the runtime graph serialized in this asset with the given index.<br>
@@ -354,7 +360,7 @@ Use <a class="xref" href="PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.h
 
   <h3 id="PWS_DungeonBlueprint_Runtime_BakedRuntimeGraphsAsset_GetRuntimeGraphBySeedAlloc_System_UInt32_PWS_DungeonBlueprint_Core_DBPRegistry_PWS_DungeonBlueprint_Runtime_RuntimeGraph__" data-uid="PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.GetRuntimeGraphBySeedAlloc(System.UInt32,PWS.DungeonBlueprint.Core.DBPRegistry,PWS.DungeonBlueprint.Runtime.RuntimeGraph@)">
   GetRuntimeGraphBySeedAlloc(uint, DBPRegistry, out RuntimeGraph)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/Runtime/BakedRuntimeGraphsAsset.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the runtime graph serialized in this asset with the given seed.<br>
