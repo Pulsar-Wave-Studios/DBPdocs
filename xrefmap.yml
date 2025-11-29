@@ -255,6 +255,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.EdgeNames
   nameWithType: ConstructionGraph.ReadOnly.EdgeNames
+- uid: PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.html#PWS_DungeonBlueprint_Construction_ConstructionGraph_ReadOnly_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.IsCreated
+  fullName: PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.IsCreated
+  nameWithType: ConstructionGraph.ReadOnly.IsCreated
+- uid: PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.html#PWS_DungeonBlueprint_Construction_ConstructionGraph_ReadOnly_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.IsCreated
+  nameWithType: ConstructionGraph.ReadOnly.IsCreated
 - uid: PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Construction.ConstructionGraph.ReadOnly.html#PWS_DungeonBlueprint_Construction_ConstructionGraph_ReadOnly_NodeAdjacencies
@@ -2076,6 +2089,19 @@ references:
   fullName.vb: PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.New
   nameWithType: MissionGraph.ReadOnly.ReadOnly
   nameWithType.vb: MissionGraph.ReadOnly.New
+- uid: PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_MissionGraph_ReadOnly_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.IsCreated
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.IsCreated
+  nameWithType: MissionGraph.ReadOnly.IsCreated
+- uid: PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_MissionGraph_ReadOnly_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.IsCreated
+  nameWithType: MissionGraph.ReadOnly.IsCreated
 - uid: PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.Root
   name: Root
   href: api/PWS.DungeonBlueprint.Mission.MissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_MissionGraph_ReadOnly_Root
@@ -2393,6 +2419,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.AdjacencyPortalName
   nameWithType: PartialMissionGraph.ReadOnly.AdjacencyPortalName
+- uid: PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_PartialMissionGraph_ReadOnly_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.IsCreated
+  fullName: PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.IsCreated
+  nameWithType: PartialMissionGraph.ReadOnly.IsCreated
+- uid: PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_PartialMissionGraph_ReadOnly_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.IsCreated
+  nameWithType: PartialMissionGraph.ReadOnly.IsCreated
 - uid: PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Mission.PartialMissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_PartialMissionGraph_ReadOnly_NodeAdjacencies
@@ -3879,6 +3918,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.EdgeNames
   nameWithType: TopologyGraph.ReadOnly.EdgeNames
+- uid: PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.html#PWS_DungeonBlueprint_Topology_TopologyGraph_ReadOnly_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.IsCreated
+  fullName: PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.IsCreated
+  nameWithType: TopologyGraph.ReadOnly.IsCreated
+- uid: PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.html#PWS_DungeonBlueprint_Topology_TopologyGraph_ReadOnly_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.IsCreated
+  nameWithType: TopologyGraph.ReadOnly.IsCreated
 - uid: PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Topology.TopologyGraph.ReadOnly.html#PWS_DungeonBlueprint_Topology_TopologyGraph_ReadOnly_NodeAdjacencies
