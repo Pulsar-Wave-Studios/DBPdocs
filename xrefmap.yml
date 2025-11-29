@@ -2545,6 +2545,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.Dispose
   nameWithType: ResolvedMissionGraph.Dispose
+- uid: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.html#PWS_DungeonBlueprint_Mission_ResolvedMissionGraph_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.IsCreated
+  fullName: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.IsCreated
+  nameWithType: ResolvedMissionGraph.IsCreated
+- uid: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.html#PWS_DungeonBlueprint_Mission_ResolvedMissionGraph_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.IsCreated
+  nameWithType: ResolvedMissionGraph.IsCreated
 - uid: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.html#PWS_DungeonBlueprint_Mission_ResolvedMissionGraph_NodeAdjacencies
@@ -2600,6 +2613,19 @@ references:
   fullName.vb: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.New
   nameWithType: ResolvedMissionGraph.ReadOnly.ReadOnly
   nameWithType.vb: ResolvedMissionGraph.ReadOnly.New
+- uid: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.IsCreated
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_ResolvedMissionGraph_ReadOnly_IsCreated
+  commentId: P:PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.IsCreated
+  fullName: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.IsCreated
+  nameWithType: ResolvedMissionGraph.ReadOnly.IsCreated
+- uid: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.IsCreated*
+  name: IsCreated
+  href: api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_ResolvedMissionGraph_ReadOnly_IsCreated_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.IsCreated
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.IsCreated
+  nameWithType: ResolvedMissionGraph.ReadOnly.IsCreated
 - uid: PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.NodeAdjacencies
   name: NodeAdjacencies
   href: api/PWS.DungeonBlueprint.Mission.ResolvedMissionGraph.ReadOnly.html#PWS_DungeonBlueprint_Mission_ResolvedMissionGraph_ReadOnly_NodeAdjacencies
