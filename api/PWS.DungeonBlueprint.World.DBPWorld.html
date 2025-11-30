@@ -431,7 +431,7 @@ If your own code instantiates more GameObjects alongside the spawned rooms and d
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_AreRoomsConnected_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.AreRoomsConnected(System.Int32,System.Int32)">
   AreRoomsConnected(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L445"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks whether the two given rooms are connected through a door.<br>
@@ -472,6 +472,9 @@ You can get the room indices using another query (like <a class="xref" href="PWS
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If <code class="paramref">room1</code> does not exist.</p>
 </dd>
@@ -518,7 +521,7 @@ You may use this as indication that the world will not be reused, and it is time
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_DoesDoorConnectRooms_System_Int32_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.DoesDoorConnectRooms(System.Int32,System.Int32,System.Int32)">
   DoesDoorConnectRooms(int, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L760"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L781"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks whether the given door connects to the two given rooms.
@@ -563,6 +566,9 @@ You can get the room indices using another query (like <a class="xref" href="PWS
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If the given door does not exist.</p>
 </dd>
@@ -583,7 +589,7 @@ You can get the room indices using another query (like <a class="xref" href="PWS
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorBetweenRooms_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorBetweenRooms(System.Int32,System.Int32)">
   GetDoorBetweenRooms(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L483"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L494"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the door between two rooms.<br>
@@ -624,6 +630,9 @@ You can get the room indices using another query (like <a class="xref" href="PWS
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If <code class="paramref">room1</code> does not exist.</p>
 </dd>
@@ -638,7 +647,7 @@ You can get the room indices using another query (like <a class="xref" href="PWS
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByGameObject_UnityEngine_GameObject_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByGameObject(UnityEngine.GameObject)">
   GetDoorByGameObject(GameObject)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L713"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L731"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the door index of the door with the given game object.</p>
@@ -686,7 +695,7 @@ You can get the room indices using another query (like <a class="xref" href="PWS
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByGridPositionAndDirection_PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_Grid_GridDirection_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByGridPositionAndDirection(PWS.DungeonBlueprint.Grid.GridPosition,PWS.DungeonBlueprint.Grid.GridDirection)">
   GetDoorByGridPositionAndDirection(GridPosition, GridDirection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L681"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L699"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the door index of the door with the given position and direction.<br></p>
@@ -738,7 +747,7 @@ This function always checks both the given position and direction and its equiva
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorByName_Unity_Collections_FixedString64Bytes_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorByName(Unity.Collections.FixedString64Bytes,System.Int32)">
   GetDoorByName(FixedString64Bytes, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L654"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L672"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the door index of the door with the given name.<br>
@@ -787,7 +796,7 @@ Door name is not necessarily unique, so you can pass an additional index.</p>
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorConnectedToRoom_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorConnectedToRoom(System.Int32,System.Int32)">
   GetDoorConnectedToRoom(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L457"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L466"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the door connected to the given room with the given index.<br>
@@ -827,6 +836,9 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If the given room does not exist.</p>
 </dd>
@@ -841,7 +853,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorData_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorData(System.Int32)">
   GetDoorData(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L693"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L711"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the door data of the given door.
@@ -899,7 +911,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorGameObject_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorGameObject(System.Int32)">
   GetDoorGameObject(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L704"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L722"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the game object of the given door.<br>
@@ -951,7 +963,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorGridPositionAndDirection_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorGridPositionAndDirection(System.Int32)">
   GetDoorGridPositionAndDirection(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L668"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L686"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the grid position of the given door.<br>
@@ -1004,7 +1016,7 @@ There is no way to predict which combination this function will return. However,
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetDoorName_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetDoorName(System.Int32)">
   GetDoorName(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L644"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L662"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the given door.<br>
@@ -1053,7 +1065,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetGridPositionFromWorldPosition_UnityEngine_Vector3_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetGridPositionFromWorldPosition(UnityEngine.Vector3)">
   GetGridPositionFromWorldPosition(Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L839"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L862"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Turns the given world position into the corresponding grid position using <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_DungeonOriginWorldPosition">DungeonOriginWorldPosition</a> and <a class="xref" href="PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_RoomGridToWorld">RoomGridToWorld</a>.</p>
@@ -1095,7 +1107,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetPathBetween_System_Collections_Generic_List_PWS_DungeonBlueprint_Grid_GridPosition__PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_Grid_GridPosition_PWS_DungeonBlueprint_World_CanMoveCheckCallback_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetPathBetween(System.Collections.Generic.List{PWS.DungeonBlueprint.Grid.GridPosition},PWS.DungeonBlueprint.Grid.GridPosition,PWS.DungeonBlueprint.Grid.GridPosition,PWS.DungeonBlueprint.World.CanMoveCheckCallback)">
   GetPathBetween(List&lt;GridPosition&gt;, GridPosition, GridPosition, CanMoveCheckCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the path between two rooms and fills it into the given list.</p>
@@ -1147,6 +1159,12 @@ If you pass a delegate instance as <code class="paramref">canMove</code>, you sh
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
     <dd><p>If <code class="paramref">pathOutput</code> is null.</p>
 </dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">start</code> is not inside the dungeon's grid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If <code class="paramref">goal</code> is not inside the dungeon's grid.</p>
+</dd>
   </dl>
 
 
@@ -1155,7 +1173,7 @@ If you pass a delegate instance as <code class="paramref">canMove</code>, you sh
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByEntryPortalName_Unity_Collections_FixedString64Bytes_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes)">
   GetRoomByEntryPortalName(FixedString64Bytes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L563"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the room that was connected to an entry portal with the given name in the mission graph the dungeon was generated on.</p>
@@ -1200,7 +1218,7 @@ If you pass a delegate instance as <code class="paramref">canMove</code>, you sh
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByExitPortalName_Unity_Collections_FixedString64Bytes_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByExitPortalName(Unity.Collections.FixedString64Bytes)">
   GetRoomByExitPortalName(FixedString64Bytes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L569"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L587"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the room that was connected to an exit portal with the given name in the mission graph the dungeon was generated on.</p>
@@ -1245,7 +1263,7 @@ If you pass a delegate instance as <code class="paramref">canMove</code>, you sh
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByGameObject_UnityEngine_GameObject_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByGameObject(UnityEngine.GameObject)">
   GetRoomByGameObject(GameObject)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L377"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the room index of the room with the given game object.</p>
@@ -1293,7 +1311,7 @@ If you pass a delegate instance as <code class="paramref">canMove</code>, you sh
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByGridPosition_PWS_DungeonBlueprint_Grid_GridPosition_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByGridPosition(PWS.DungeonBlueprint.Grid.GridPosition)">
   GetRoomByGridPosition(GridPosition)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L335"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the room index of the room with the given grid position.<br></p>
@@ -1338,7 +1356,7 @@ If you pass a delegate instance as <code class="paramref">canMove</code>, you sh
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomByName_Unity_Collections_FixedString64Bytes_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomByName(Unity.Collections.FixedString64Bytes,System.Int32)">
   GetRoomByName(FixedString64Bytes, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the room index of the room with the given name.<br>
@@ -1387,7 +1405,7 @@ The room name is not necessarily unique, so you can pass an additional index.</p
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectedToRoom_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomConnectedToRoom(System.Int32,System.Int32)">
   GetRoomConnectedToRoom(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L419"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the room connected to the given room with the given index.<br>
@@ -1429,6 +1447,9 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If the given room does not exist.</p>
 </dd>
@@ -1443,7 +1464,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomConnectionCount_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomConnectionCount(System.Int32)">
   GetRoomConnectionCount(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L388"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of doors (and thus rooms) connected to the given room.
@@ -1478,6 +1499,9 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If the given room does not exist.</p>
 </dd>
@@ -1492,7 +1516,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomData_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomData(System.Int32)">
   GetRoomData(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L346"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the room data of the given room.<br>
@@ -1544,7 +1568,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomEntryPortalName_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomEntryPortalName(System.Int32)">
   GetRoomEntryPortalName(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L533"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L548"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the entry portal the given room was connected to in the mission graph the dungeon was generated on.</p>
@@ -1578,6 +1602,9 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If the given room does not exist.</p>
 </dd>
@@ -1589,7 +1616,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomExitPortalName_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomExitPortalName(System.Int32)">
   GetRoomExitPortalName(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L572"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the exit portal the given room was connected to in the mission graph the dungeon was generated on.</p>
@@ -1623,6 +1650,9 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If the given room does not exist.</p>
 </dd>
@@ -1634,7 +1664,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomGameObject_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomGameObject(System.Int32)">
   GetRoomGameObject(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L368"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the game object of the given room.<br>
@@ -1686,7 +1716,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomGridPosition_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomGridPosition(System.Int32)">
   GetRoomGridPosition(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L327"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the grid position of the given room.<br>
@@ -1735,7 +1765,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomName_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomName(System.Int32)">
   GetRoomName(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the given room.<br>
@@ -1784,7 +1814,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomSize_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomSize(System.Int32)">
   GetRoomSize(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L357"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the size of the given room.<br>
@@ -1836,7 +1866,7 @@ You can get the room index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_GetRoomsConnectedToDoor_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.GetRoomsConnectedToDoor(System.Int32)">
   GetRoomsConnectedToDoor(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L726"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L745"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the rooms connected to the given door.
@@ -1874,6 +1904,9 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If the given door does not exist.</p>
 </dd>
@@ -1888,7 +1921,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_IsDoorConnectedToRoom_System_Int32_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.IsDoorConnectedToRoom(System.Int32,System.Int32)">
   IsDoorConnectedToRoom(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L510"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L523"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks whether the given room is connected to the given door.<br>
@@ -1927,6 +1960,9 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>If the world is not set up.</p>
+</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>If the given room does not exist.</p>
 </dd>
@@ -1941,7 +1977,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterDoorEvents(UnityEngine.Transform,PWS.DungeonBlueprint.World.DoorPassHandler)">
   RegisterDoorEvents(Transform, DoorPassHandler)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L786"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L809"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts tracking the given transform for door events, which will cause the given delegate to be called whenever the transform passes through a door.</p>
@@ -1986,7 +2022,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RegisterDoorEvents_UnityEngine_Transform_System_Int32_PWS_DungeonBlueprint_World_DoorPassHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterDoorEvents(UnityEngine.Transform,System.Int32,PWS.DungeonBlueprint.World.DoorPassHandler)">
   RegisterDoorEvents(Transform, int, DoorPassHandler)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L797"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L820"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts tracking the given transform for door events on the given door, which will cause the given delegate to be called whenever the transform passes through the given door.</p>
@@ -2037,7 +2073,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterRoomEvents(UnityEngine.Transform,PWS.DungeonBlueprint.World.RoomEnterEventHandler,PWS.DungeonBlueprint.World.RoomStayEventHandler,PWS.DungeonBlueprint.World.RoomExitEventHandler)">
   RegisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L589"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L607"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts tracking the given transform for room events, which will cause the given delegates to be called whenever the transform enters/stays in/exits a room.</p>
@@ -2085,7 +2121,7 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_RegisterRoomEvents_UnityEngine_Transform_System_Int32_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.RegisterRoomEvents(UnityEngine.Transform,System.Int32,PWS.DungeonBlueprint.World.RoomEnterEventHandler,PWS.DungeonBlueprint.World.RoomStayEventHandler,PWS.DungeonBlueprint.World.RoomExitEventHandler)">
   RegisterRoomEvents(Transform, int, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L619"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts tracking the given transform for room events on the given room, which will cause the given delegates to be called whenever the transform enters/stays in/exits the given room.</p>
@@ -2263,7 +2299,7 @@ Calling this does nothing if the world is not set up.</p>
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_UnityEngine_Transform_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform)">
   UnregisterDoorEvents(Transform)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L805"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L828"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops tracking the given transform for door events.</p>
@@ -2305,7 +2341,7 @@ Calling this does nothing if the world is not set up.</p>
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_DoorPassHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform,PWS.DungeonBlueprint.World.DoorPassHandler)">
   UnregisterDoorEvents(Transform, DoorPassHandler)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L816"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L839"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops tracking the given transform for door events with the given callbacks.<br>
@@ -2354,7 +2390,7 @@ Should the transform be registered for door events with multiple different callb
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_UnityEngine_Transform_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform,System.Int32)">
   UnregisterDoorEvents(Transform, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L827"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L850"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops tracking the given transform for door events for the given door.<br>
@@ -2403,7 +2439,7 @@ Should the transform be registered for door events for multiple door, this will 
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_UnityEngine_Transform_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform)">
   UnregisterRoomEvents(Transform)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L609"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L627"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops tracking the given transform for room events.</p>
@@ -2445,7 +2481,7 @@ Should the transform be registered for door events for multiple door, this will 
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_UnityEngine_Transform_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform,PWS.DungeonBlueprint.World.RoomEnterEventHandler,PWS.DungeonBlueprint.World.RoomStayEventHandler,PWS.DungeonBlueprint.World.RoomExitEventHandler)">
   UnregisterRoomEvents(Transform, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L621"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L639"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops tracking the given transform for room events with the given callbacks.<br>
@@ -2497,7 +2533,7 @@ Should the transform be registered for room events with multiple different callb
 
   <h3 id="PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_UnityEngine_Transform_System_Int32_" data-uid="PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform,System.Int32)">
   UnregisterRoomEvents(Transform, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L632"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Pulsar-Wave-Studios/DungeonBlueprint/blob/main/Assets/PWS/DungeonBlueprint/Scripts/World/DBPWorld.cs/#L650"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops tracking the given transform for room events for the given room.<br>
