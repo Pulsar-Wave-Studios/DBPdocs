@@ -4617,6 +4617,32 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.World.DBPWorld.GetPathBetween
   nameWithType: DBPWorld.GetPathBetween
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes)
+  name: GetRoomByEntryPortalName(FixedString64Bytes)
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByEntryPortalName_Unity_Collections_FixedString64Bytes_
+  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.GetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes)
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes)
+  nameWithType: DBPWorld.GetRoomByEntryPortalName(FixedString64Bytes)
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByEntryPortalName*
+  name: GetRoomByEntryPortalName
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByEntryPortalName_
+  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.GetRoomByEntryPortalName
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByEntryPortalName
+  nameWithType: DBPWorld.GetRoomByEntryPortalName
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByExitPortalName(Unity.Collections.FixedString64Bytes)
+  name: GetRoomByExitPortalName(FixedString64Bytes)
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByExitPortalName_Unity_Collections_FixedString64Bytes_
+  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.GetRoomByExitPortalName(Unity.Collections.FixedString64Bytes)
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByExitPortalName(Unity.Collections.FixedString64Bytes)
+  nameWithType: DBPWorld.GetRoomByExitPortalName(FixedString64Bytes)
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByExitPortalName*
+  name: GetRoomByExitPortalName
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByExitPortalName_
+  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.GetRoomByExitPortalName
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByExitPortalName
+  nameWithType: DBPWorld.GetRoomByExitPortalName
 - uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomByGameObject(UnityEngine.GameObject)
   name: GetRoomByGameObject(GameObject)
   href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomByGameObject_UnityEngine_GameObject_
@@ -4707,6 +4733,38 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomData
   nameWithType: DBPWorld.GetRoomData
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomEntryPortalName(System.Int32)
+  name: GetRoomEntryPortalName(int)
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomEntryPortalName_System_Int32_
+  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.GetRoomEntryPortalName(System.Int32)
+  name.vb: GetRoomEntryPortalName(Integer)
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomEntryPortalName(int)
+  fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.GetRoomEntryPortalName(Integer)
+  nameWithType: DBPWorld.GetRoomEntryPortalName(int)
+  nameWithType.vb: DBPWorld.GetRoomEntryPortalName(Integer)
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomEntryPortalName*
+  name: GetRoomEntryPortalName
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomEntryPortalName_
+  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.GetRoomEntryPortalName
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomEntryPortalName
+  nameWithType: DBPWorld.GetRoomEntryPortalName
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomExitPortalName(System.Int32)
+  name: GetRoomExitPortalName(int)
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomExitPortalName_System_Int32_
+  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.GetRoomExitPortalName(System.Int32)
+  name.vb: GetRoomExitPortalName(Integer)
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomExitPortalName(int)
+  fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.GetRoomExitPortalName(Integer)
+  nameWithType: DBPWorld.GetRoomExitPortalName(int)
+  nameWithType.vb: DBPWorld.GetRoomExitPortalName(Integer)
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomExitPortalName*
+  name: GetRoomExitPortalName
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomExitPortalName_
+  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.GetRoomExitPortalName
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomExitPortalName
+  nameWithType: DBPWorld.GetRoomExitPortalName
 - uid: PWS.DungeonBlueprint.World.DBPWorld.GetRoomGameObject(System.Int32)
   name: GetRoomGameObject(int)
   href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetRoomGameObject_System_Int32_
@@ -4963,70 +5021,6 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.World.DBPWorld.Tick
   nameWithType: DBPWorld.Tick
-- uid: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes,System.Int32@)
-  name: TryGetRoomByEntryPortalName(FixedString64Bytes, out int)
-  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomByEntryPortalName_Unity_Collections_FixedString64Bytes_System_Int32__
-  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes,System.Int32@)
-  name.vb: TryGetRoomByEntryPortalName(FixedString64Bytes, Integer)
-  fullName: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes, out int)
-  fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName(Unity.Collections.FixedString64Bytes, Integer)
-  nameWithType: DBPWorld.TryGetRoomByEntryPortalName(FixedString64Bytes, out int)
-  nameWithType.vb: DBPWorld.TryGetRoomByEntryPortalName(FixedString64Bytes, Integer)
-- uid: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName*
-  name: TryGetRoomByEntryPortalName
-  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomByEntryPortalName_
-  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName
-  isSpec: "True"
-  fullName: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByEntryPortalName
-  nameWithType: DBPWorld.TryGetRoomByEntryPortalName
-- uid: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName(Unity.Collections.FixedString64Bytes,System.Int32@)
-  name: TryGetRoomByExitPortalName(FixedString64Bytes, out int)
-  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomByExitPortalName_Unity_Collections_FixedString64Bytes_System_Int32__
-  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName(Unity.Collections.FixedString64Bytes,System.Int32@)
-  name.vb: TryGetRoomByExitPortalName(FixedString64Bytes, Integer)
-  fullName: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName(Unity.Collections.FixedString64Bytes, out int)
-  fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName(Unity.Collections.FixedString64Bytes, Integer)
-  nameWithType: DBPWorld.TryGetRoomByExitPortalName(FixedString64Bytes, out int)
-  nameWithType.vb: DBPWorld.TryGetRoomByExitPortalName(FixedString64Bytes, Integer)
-- uid: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName*
-  name: TryGetRoomByExitPortalName
-  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomByExitPortalName_
-  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName
-  isSpec: "True"
-  fullName: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomByExitPortalName
-  nameWithType: DBPWorld.TryGetRoomByExitPortalName
-- uid: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName(System.Int32,Unity.Collections.FixedString64Bytes@)
-  name: TryGetRoomEntryPortalName(int, out FixedString64Bytes)
-  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomEntryPortalName_System_Int32_Unity_Collections_FixedString64Bytes__
-  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName(System.Int32,Unity.Collections.FixedString64Bytes@)
-  name.vb: TryGetRoomEntryPortalName(Integer, FixedString64Bytes)
-  fullName: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName(int, out Unity.Collections.FixedString64Bytes)
-  fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName(Integer, Unity.Collections.FixedString64Bytes)
-  nameWithType: DBPWorld.TryGetRoomEntryPortalName(int, out FixedString64Bytes)
-  nameWithType.vb: DBPWorld.TryGetRoomEntryPortalName(Integer, FixedString64Bytes)
-- uid: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName*
-  name: TryGetRoomEntryPortalName
-  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomEntryPortalName_
-  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName
-  isSpec: "True"
-  fullName: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomEntryPortalName
-  nameWithType: DBPWorld.TryGetRoomEntryPortalName
-- uid: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName(System.Int32,Unity.Collections.FixedString64Bytes@)
-  name: TryGetRoomExitPortalName(int, out FixedString64Bytes)
-  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomExitPortalName_System_Int32_Unity_Collections_FixedString64Bytes__
-  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName(System.Int32,Unity.Collections.FixedString64Bytes@)
-  name.vb: TryGetRoomExitPortalName(Integer, FixedString64Bytes)
-  fullName: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName(int, out Unity.Collections.FixedString64Bytes)
-  fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName(Integer, Unity.Collections.FixedString64Bytes)
-  nameWithType: DBPWorld.TryGetRoomExitPortalName(int, out FixedString64Bytes)
-  nameWithType.vb: DBPWorld.TryGetRoomExitPortalName(Integer, FixedString64Bytes)
-- uid: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName*
-  name: TryGetRoomExitPortalName
-  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_TryGetRoomExitPortalName_
-  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName
-  isSpec: "True"
-  fullName: PWS.DungeonBlueprint.World.DBPWorld.TryGetRoomExitPortalName
-  nameWithType: DBPWorld.TryGetRoomExitPortalName
 - uid: PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform)
   name: UnregisterDoorEvents(Transform)
   href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_UnityEngine_Transform_
