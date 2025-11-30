@@ -334,34 +334,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridPath.ReadOnly.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridPath.ReadOnly.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "PWS.DungeonBlueprint.Grid.GridPath.ReadOnly",
-      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridPath.ReadOnly.yml\" sourcestartlinenumber=\"1\">Read-only wrapper around a path instance.<br>\nThis is only a view over the existing memory and not a deep copy.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridPath.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PWS.DungeonBlueprint.Grid.GridPath.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "PWS.DungeonBlueprint.Grid.GridPath",
-      "Summary": "<p sourcefile=\"api/PWS.DungeonBlueprint.Grid.GridPath.yml\" sourcestartlinenumber=\"1\">Represents a path from one node to another node through the graph.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/PWS.DungeonBlueprint.Grid.GridPosition.yml",
       "output": {
         ".html": {
