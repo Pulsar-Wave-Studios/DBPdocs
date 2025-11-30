@@ -1103,13 +1103,13 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GetPathBetween(List&lt;GridPosition&gt; pathOutput, GridPosition start, GridPosition goal, CanMoveCheckCallback canMove = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool GetPathBetween(List&lt;GridPosition&gt; pathOutput, GridPosition start, GridPosition goal, CanMoveCheckCallback canMove = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>pathOutput</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a>&gt;</dt>
-    <dd><p>List that will be filled with all rooms along the path. Contains <code class="paramref">start</code> at index 0 and <code class="paramref">goal</code> at the last index.</p>
+    <dd><p>List that will be filled with all rooms along the path. Contains <code class="paramref">start</code> at index 0 and <code class="paramref">goal</code> at the last index. If no path exists between the two positions, the list will stay empty.</p>
 </dd>
     <dt><code>start</code> <a class="xref" href="PWS.DungeonBlueprint.Grid.GridPosition.html">GridPosition</a></dt>
     <dd><p>Start position of the path.</p>
@@ -1122,6 +1122,12 @@ You can get the door index using another query (like <a class="xref" href="PWS.D
 </dd>
   </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if a valid path was found between the two positions, false otherwise.</p>
+</dd>
+  </dl>
 
 
 
@@ -1140,9 +1146,6 @@ If you pass a delegate instance as <code class="paramref">canMove</code>, you sh
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
     <dd><p>If <code class="paramref">pathOutput</code> is null.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>If no path between the rooms exists. This might indicate an invalid graph.</p>
 </dd>
   </dl>
 
