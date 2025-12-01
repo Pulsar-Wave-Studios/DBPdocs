@@ -4769,6 +4769,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.World.DBPWorld.GetRoomsConnectedToDoor
   nameWithType: DBPWorld.GetRoomsConnectedToDoor
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetWorldPositionFromGridPosition(PWS.DungeonBlueprint.Grid.GridPosition)
+  name: GetWorldPositionFromGridPosition(GridPosition)
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetWorldPositionFromGridPosition_PWS_DungeonBlueprint_Grid_GridPosition_
+  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.GetWorldPositionFromGridPosition(PWS.DungeonBlueprint.Grid.GridPosition)
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetWorldPositionFromGridPosition(PWS.DungeonBlueprint.Grid.GridPosition)
+  nameWithType: DBPWorld.GetWorldPositionFromGridPosition(GridPosition)
+- uid: PWS.DungeonBlueprint.World.DBPWorld.GetWorldPositionFromGridPosition*
+  name: GetWorldPositionFromGridPosition
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_GetWorldPositionFromGridPosition_
+  commentId: Overload:PWS.DungeonBlueprint.World.DBPWorld.GetWorldPositionFromGridPosition
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.GetWorldPositionFromGridPosition
+  nameWithType: DBPWorld.GetWorldPositionFromGridPosition
 - uid: PWS.DungeonBlueprint.World.DBPWorld.IsDoorConnectedToRoom(System.Int32,System.Int32)
   name: IsDoorConnectedToRoom(int, int)
   href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_IsDoorConnectedToRoom_System_Int32_System_Int32_
