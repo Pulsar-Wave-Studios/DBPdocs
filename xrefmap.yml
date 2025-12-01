@@ -4979,6 +4979,15 @@ references:
   fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform, Integer)
   nameWithType: DBPWorld.UnregisterDoorEvents(Transform, int)
   nameWithType.vb: DBPWorld.UnregisterDoorEvents(Transform, Integer)
+- uid: PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform,System.Int32,PWS.DungeonBlueprint.World.DoorPassHandler)
+  name: UnregisterDoorEvents(Transform, int, DoorPassHandler)
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_UnityEngine_Transform_System_Int32_PWS_DungeonBlueprint_World_DoorPassHandler_
+  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform,System.Int32,PWS.DungeonBlueprint.World.DoorPassHandler)
+  name.vb: UnregisterDoorEvents(Transform, Integer, DoorPassHandler)
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform, int, PWS.DungeonBlueprint.World.DoorPassHandler)
+  fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents(UnityEngine.Transform, Integer, PWS.DungeonBlueprint.World.DoorPassHandler)
+  nameWithType: DBPWorld.UnregisterDoorEvents(Transform, int, DoorPassHandler)
+  nameWithType.vb: DBPWorld.UnregisterDoorEvents(Transform, Integer, DoorPassHandler)
 - uid: PWS.DungeonBlueprint.World.DBPWorld.UnregisterDoorEvents*
   name: UnregisterDoorEvents
   href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_UnregisterDoorEvents_
@@ -5007,6 +5016,15 @@ references:
   fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform, Integer)
   nameWithType: DBPWorld.UnregisterRoomEvents(Transform, int)
   nameWithType.vb: DBPWorld.UnregisterRoomEvents(Transform, Integer)
+- uid: PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform,System.Int32,PWS.DungeonBlueprint.World.RoomEnterEventHandler,PWS.DungeonBlueprint.World.RoomStayEventHandler,PWS.DungeonBlueprint.World.RoomExitEventHandler)
+  name: UnregisterRoomEvents(Transform, int, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
+  href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_UnityEngine_Transform_System_Int32_PWS_DungeonBlueprint_World_RoomEnterEventHandler_PWS_DungeonBlueprint_World_RoomStayEventHandler_PWS_DungeonBlueprint_World_RoomExitEventHandler_
+  commentId: M:PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform,System.Int32,PWS.DungeonBlueprint.World.RoomEnterEventHandler,PWS.DungeonBlueprint.World.RoomStayEventHandler,PWS.DungeonBlueprint.World.RoomExitEventHandler)
+  name.vb: UnregisterRoomEvents(Transform, Integer, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
+  fullName: PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform, int, PWS.DungeonBlueprint.World.RoomEnterEventHandler, PWS.DungeonBlueprint.World.RoomStayEventHandler, PWS.DungeonBlueprint.World.RoomExitEventHandler)
+  fullName.vb: PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents(UnityEngine.Transform, Integer, PWS.DungeonBlueprint.World.RoomEnterEventHandler, PWS.DungeonBlueprint.World.RoomStayEventHandler, PWS.DungeonBlueprint.World.RoomExitEventHandler)
+  nameWithType: DBPWorld.UnregisterRoomEvents(Transform, int, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
+  nameWithType.vb: DBPWorld.UnregisterRoomEvents(Transform, Integer, RoomEnterEventHandler, RoomStayEventHandler, RoomExitEventHandler)
 - uid: PWS.DungeonBlueprint.World.DBPWorld.UnregisterRoomEvents*
   name: UnregisterRoomEvents
   href: api/PWS.DungeonBlueprint.World.DBPWorld.html#PWS_DungeonBlueprint_World_DBPWorld_UnregisterRoomEvents_
