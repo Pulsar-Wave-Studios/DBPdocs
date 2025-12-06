@@ -2111,6 +2111,58 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.DeserializeRootPartialGraphAlloc
   nameWithType: MissionGraphAsset.DeserializeRootPartialGraphAlloc
+- uid: PWS.DungeonBlueprint.Mission.MissionGraphAsset.DoorDataCollections
+  name: DoorDataCollections
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html#PWS_DungeonBlueprint_Mission_MissionGraphAsset_DoorDataCollections
+  commentId: P:PWS.DungeonBlueprint.Mission.MissionGraphAsset.DoorDataCollections
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.DoorDataCollections
+  nameWithType: MissionGraphAsset.DoorDataCollections
+- uid: PWS.DungeonBlueprint.Mission.MissionGraphAsset.DoorDataCollections*
+  name: DoorDataCollections
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html#PWS_DungeonBlueprint_Mission_MissionGraphAsset_DoorDataCollections_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.MissionGraphAsset.DoorDataCollections
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.DoorDataCollections
+  nameWithType: MissionGraphAsset.DoorDataCollections
+- uid: PWS.DungeonBlueprint.Mission.MissionGraphAsset.Name
+  name: Name
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html#PWS_DungeonBlueprint_Mission_MissionGraphAsset_Name
+  commentId: P:PWS.DungeonBlueprint.Mission.MissionGraphAsset.Name
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.Name
+  nameWithType: MissionGraphAsset.Name
+- uid: PWS.DungeonBlueprint.Mission.MissionGraphAsset.Name*
+  name: Name
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html#PWS_DungeonBlueprint_Mission_MissionGraphAsset_Name_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.MissionGraphAsset.Name
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.Name
+  nameWithType: MissionGraphAsset.Name
+- uid: PWS.DungeonBlueprint.Mission.MissionGraphAsset.RoomDataCollections
+  name: RoomDataCollections
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html#PWS_DungeonBlueprint_Mission_MissionGraphAsset_RoomDataCollections
+  commentId: P:PWS.DungeonBlueprint.Mission.MissionGraphAsset.RoomDataCollections
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.RoomDataCollections
+  nameWithType: MissionGraphAsset.RoomDataCollections
+- uid: PWS.DungeonBlueprint.Mission.MissionGraphAsset.RoomDataCollections*
+  name: RoomDataCollections
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html#PWS_DungeonBlueprint_Mission_MissionGraphAsset_RoomDataCollections_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.MissionGraphAsset.RoomDataCollections
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.RoomDataCollections
+  nameWithType: MissionGraphAsset.RoomDataCollections
+- uid: PWS.DungeonBlueprint.Mission.MissionGraphAsset.SubgraphAssets
+  name: SubgraphAssets
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html#PWS_DungeonBlueprint_Mission_MissionGraphAsset_SubgraphAssets
+  commentId: P:PWS.DungeonBlueprint.Mission.MissionGraphAsset.SubgraphAssets
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.SubgraphAssets
+  nameWithType: MissionGraphAsset.SubgraphAssets
+- uid: PWS.DungeonBlueprint.Mission.MissionGraphAsset.SubgraphAssets*
+  name: SubgraphAssets
+  href: api/PWS.DungeonBlueprint.Mission.MissionGraphAsset.html#PWS_DungeonBlueprint_Mission_MissionGraphAsset_SubgraphAssets_
+  commentId: Overload:PWS.DungeonBlueprint.Mission.MissionGraphAsset.SubgraphAssets
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Mission.MissionGraphAsset.SubgraphAssets
+  nameWithType: MissionGraphAsset.SubgraphAssets
 - uid: PWS.DungeonBlueprint.Mission.MissionGroupMetaData
   name: MissionGroupMetaData
   href: api/PWS.DungeonBlueprint.Mission.MissionGroupMetaData.html
@@ -3276,6 +3328,19 @@ references:
   isSpec: "True"
   fullName: PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.Mission
   nameWithType: BakedRuntimeGraphsAsset.Mission
+- uid: PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.Name
+  name: Name
+  href: api/PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.html#PWS_DungeonBlueprint_Runtime_BakedRuntimeGraphsAsset_Name
+  commentId: P:PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.Name
+  fullName: PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.Name
+  nameWithType: BakedRuntimeGraphsAsset.Name
+- uid: PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.Name*
+  name: Name
+  href: api/PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.html#PWS_DungeonBlueprint_Runtime_BakedRuntimeGraphsAsset_Name_
+  commentId: Overload:PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.Name
+  isSpec: "True"
+  fullName: PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.Name
+  nameWithType: BakedRuntimeGraphsAsset.Name
 - uid: PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.NrSerializedGraphs
   name: NrSerializedGraphs
   href: api/PWS.DungeonBlueprint.Runtime.BakedRuntimeGraphsAsset.html#PWS_DungeonBlueprint_Runtime_BakedRuntimeGraphsAsset_NrSerializedGraphs
